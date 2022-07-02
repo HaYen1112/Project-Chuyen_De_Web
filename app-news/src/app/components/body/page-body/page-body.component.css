@@ -1,0 +1,22 @@
+.body {
+  height: 2550px;
+  background-color: #d4d1d167;
+  margin-top: 115px;
+}
+
+@media screen and (max-width: 1200px) {
+  .body, img, section {
+    width: 1903px;
+    height: auto;
+    margin-left: 130px;
+    background-color: #d4d1d167;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body, img, section {
+    width: 303px;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=page-body.component.css.map */

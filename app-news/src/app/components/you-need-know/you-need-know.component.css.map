@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACV,MAAM,EAAE,MAAM;CACd",
+    "sources": [
+        "you-need-know.component.scss"
+    ],
+    "names": [],
+    "file": "you-need-know.component.css"
+}

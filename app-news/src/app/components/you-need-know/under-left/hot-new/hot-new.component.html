@@ -1,0 +1,48 @@
+<div class="most-recent-area">
+  <!-- Section Tittle -->
+  <div class="small-tittle mb-20">
+      <h4 style="font-weight: bold;margin: 10px 0px 20px 10px;">Tin hot</h4>
+  </div>
+  <!-- Single -->
+  <div class="most-recent-single" *ngFor="let d of data; let i=index">
+      <div class="most-recent-images">
+          <img src="{{d.image}}" alt="">
+      </div>
+      <div class="most-recent-capt">
+          <h4><a href="{{d.link}}" target="blank">{{d.title}}</a></h4>
+          <p>{{d.time}}</p>
+      </div>
+  </div>
+
+  <div class="pagination-area  gray-bg pb-45">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="single-wrap">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-start">
+                          <li class="page-item"><a class="page-link">
+                            <!-- SVG icon -->
+                            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="15px">
+                                <path fill-rule="evenodd"  fill="rgb(221, 221, 221)" d="M8.142,13.118 L6.973,14.135 L0.127,7.646 L0.127,6.623 L6.973,0.132 L8.087,1.153 L2.683,6.413 L23.309,6.413 L23.309,7.856 L2.683,7.856 L8.142,13.118 Z"/>
+                                </svg>
+                        </a></li>
+                            <li class="page-item {{active1}}"><a class="page-link" (click)="getdata1()">01</a></li>
+                            <li class="page-item {{active2}}"><a class="page-link" (click)="getdata2()">02</a></li>
+                            <li class="page-item {{active3}}"><a class="page-link" (click)="getdata3()">03</a></li>
+                            <li class="page-item"><a class="page-link" >
+                              <!-- SVG iocn -->
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="15px">
+                              <path fill-rule="evenodd"  fill="rgb(255, 11, 11)" d="M31.112,13.118 L32.281,14.136 L39.127,7.646 L39.127,6.624 L32.281,0.132 L31.167,1.154 L36.571,6.413 L0.491,6.413 L0.491,7.857 L36.571,7.857 L31.112,13.118 Z"/>
+                              </svg>
+                          </a></li>
+                          </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+

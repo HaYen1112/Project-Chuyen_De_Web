@@ -1,0 +1,13 @@
+<div class="menu_bottom">
+  <div class="navbar">
+    <div class="subnav" *ngFor="let item of dataCMMB; let h=index">
+      <button class="subnavbtn" (click)="view1(h, item.header)">{{item.header}}</button>
+      <div class="subnav-content">
+        <a [routerLink]="['/search']" *ngFor="let i of item.data; let k=index" (click)="view2(h, k, i)">{{i}}<img
+            src="https://static.thanhnien.vn/thethao2021/w/app_themes/img/hot.png"
+            style="margin-top: 0px; float: right;" class="loading" data-was-processed="true"
+            [ngStyle]="{display: getDisplay(i)}"></a>
+      </div>
+    </div>
+  </div>
+ </div>

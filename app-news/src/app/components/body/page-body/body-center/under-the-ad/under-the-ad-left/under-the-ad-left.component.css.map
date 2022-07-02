@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,4BAA4B,CAAA;EAC1B,KAAK,EAAE,GAAG;EACV,MAAM,EAAC,MAAM;EACb,WAAW,EAAE,GAAG;EAAC,KAAK,EAAE,IAAI;EAC5B,OAAO,EAAC,GAAG;CAGZ",
+    "sources": [
+        "under-the-ad-left.component.scss"
+    ],
+    "names": [],
+    "file": "under-the-ad-left.component.css"
+}

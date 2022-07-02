@@ -1,0 +1,33 @@
+.container{
+  width: 1003px;
+  height:auto;
+  margin:0px;
+  float: left;
+  padding: 0px;
+
+}
+
+/* Dành cho điện thoại */
+@media all and (min-width: 320px) {
+  .body, img, section{
+    width: 303px;
+    height:auto;
+  }
+}
+/* Dành cho máy tính bảng chiều dọc */
+@media all and (min-width: 600px) {}
+
+
+/* Dành cho máy tính bảng chiều ngang */
+@media all and (min-width: 1024px) {}
+
+
+/* Dành cho màn hình desktop */
+@media all and (min-width: 1280px) {
+  .body, img{
+    width: 1903px;
+    height:auto;
+    margin-left: 130px;
+    background-color:#d4d1d167;
+  }
+}
