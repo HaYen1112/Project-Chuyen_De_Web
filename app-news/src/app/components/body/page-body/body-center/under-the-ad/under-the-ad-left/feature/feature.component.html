@@ -8,7 +8,7 @@
               <div class="row justify-content-between align-items-end mb-15">
                   <div class="col-xl-4">
                       <div class="section-tittle mb-30">
-                          <h3 style="font-weight: bold; font-size: 25px; margin-bottom: 30px;width: 100px;">Tin mới nhất</h3>
+                          <h3 style="font-weight: bold;margin-left: 10px; font-size: 35px; margin-bottom: 30px;width: 250px;">Chuyên mục</h3>
                       </div>
                   </div>
                   <div class="col-xl-8 col-md-9">
@@ -16,12 +16,10 @@
                           <!--Nav Button  -->
                           <nav>
                               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Cuộc sống</a>
-                                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Du lịch</a>
-                                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Thời trang</a>
-                                  <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Thể thao</a>
-                                  <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Công nghệ</a>
-                              </div>
+                                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Đồng hồ nam</a>
+                                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Đồng hồ nữ</a>
+                                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Đồng hồ trẻ em</a>
+                                  </div>
                           </nav>
                           <!--End Nav Button  -->
                       </div>
@@ -59,7 +57,7 @@
                                                   </div>
                                                   <div class="whats-right-cap">
                                                       <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-                                                      <p>{{data.time}}</p>
+                                                      <p>{{data.price}}</p>
                                                   </div>
                                               </div>
                                           </div>
@@ -94,7 +92,7 @@
                                                   </div>
                                                   <div class="whats-right-cap">
                                                       <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-                                                      <p>{{data.time}}</p>
+                                                      <p>{{data.price}}</p>
                                                   </div>
                                               </div>
                                           </div>
@@ -129,7 +127,7 @@
                                                   </div>
                                                   <div class="whats-right-cap">
                                                       <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-                                                      <p>{{data.time}}</p>
+                                                      <p>{{data.price}}</p>
                                                   </div>
                                               </div>
                                           </div>
@@ -138,75 +136,7 @@
                                   </div>
                               </div>
                           </div>
-                          <!-- card fure -->
-                          <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
-                              <div class="row">
-                                  <!-- Left Details Caption -->
-                                  <div class="col-xl-6">
-                                      <div class="whats-news-single mb-40" *ngFor="let i of indexs">
-                                        <div class="whates-img">
-                                          <img src={{dataSport[i]?.image}} alt="">
-                                      </div>
-                                      <div class="whates-caption">
-                                          <h4><a href="{{dataSport[i]?.link}}" target="blank">{{dataSport[i]?.title}}</a></h4>
-                                          <span>{{dataSport[i]?.time}}</span>
-                                      </div>
-                                      </div>
-                                  </div>
-                                  <!-- Right single caption -->
-                                  <div class="col-xl-6 col-lg-12">
-                                      <div class="row">
-                                          <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataSport; let i=index">
-                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
-                                                <div class="whats-right-img">
-                                                  <img src={{data.image}} alt="">
-                                              </div>
-                                              <div class="whats-right-cap">
-                                                  <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-                                                  <p>{{data.time}}</p>
-                                              </div>
-                                              </div>
-                                          </div>
 
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- card Five -->
-                          <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel" aria-labelledby="nav-Sports">
-                              <div class="row">
-                                  <!-- Left Details Caption -->
-                                  <div class="col-xl-6">
-                                      <div class="whats-news-single mb-40" *ngFor="let i of indexs">
-                                        <div class="whates-img">
-                                          <img src={{dataTechnology[i]?.image}} alt="">
-                                      </div>
-                                      <div class="whates-caption">
-                                          <h4><a href="{{dataTechnology[i]?.link}}" target="blank">{{dataTechnology[i]?.title}}</a></h4>
-                                          <span>{{dataTechnology[i]?.time}}</span>
-                                      </div>
-                                      </div>
-                                  </div>
-                                  <!-- Right single caption -->
-                                  <div class="col-xl-6 col-lg-12">
-                                      <div class="row">
-                                          <!-- single -->
-                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataTechnology; let i=index">
-                                            <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
-                                              <div class="whats-right-img">
-                                                <img src={{data.image}} alt="">
-                                            </div>
-                                            <div class="whats-right-cap">
-                                                <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-                                                <p>{{data.time}}</p>
-                                            </div>
-                                            </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
                       </div>
                   <!-- End Nav Card -->
                   </div>

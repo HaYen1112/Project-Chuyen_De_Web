@@ -16,10 +16,10 @@ export class TabsComponent implements OnInit {
  //Công nghệ
   private urlCN ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe%2Fchuyen-doi-so.rss&api_key=gnndukhk8wcsrve3kal0zgdfm1e34bjbri7o4jjv';
   constructor(private underRight: BodyCenterComponent) {
-    this.dataMostRecent =[];
+    this.dataMostRecent =underRight.dataProduct;
     this.dataQP = [];
     this.dataCN = [];
-    this.underRight.getDatas(this.urlMostRecent, this.dataMostRecent);
+   // this.underRight.getDatas(this.urlMostRecent, this.dataMostRecent);
     this.underRight.getDatas(this.urlOP, this.dataQP);
     this.underRight.getDatas(this.urlCN, this.dataCN);
   }

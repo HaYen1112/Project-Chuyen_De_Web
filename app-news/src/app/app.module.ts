@@ -8,7 +8,6 @@ import { PageBodyComponent } from './components/body/page-body/page-body.compone
 import { BodyLeftComponent } from './components/body/page-body/body-left/body-left.component';
 import { BodyCenterComponent } from './components/body/page-body/body-center/body-center.component';
 import { BodyRightComponent } from './components/body/page-body/body-right/body-right.component';
-import { HotNewsComponent } from './components/body/page-body/body-center/hot-news/hot-news.component';
 import { AdvertisementComponent } from './components/body/page-body/body-center/advertisement/advertisement.component';
 import { UnderTheAdComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad.component';
 import { UnderTheAdLeftComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/under-the-ad-left.component';
@@ -50,7 +49,6 @@ const route: Routes = [
     BodyLeftComponent,
     BodyCenterComponent,
     BodyRightComponent,
-    HotNewsComponent,
     AdvertisementComponent,
     UnderTheAdComponent,
     UnderTheAdLeftComponent,

@@ -13,8 +13,8 @@ export class FooterComponent implements OnInit {
   @Input() datas: any[];
   private url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Ftai-chinh-kinh-doanh.rss'.trim();
     constructor(private bodyCenter: BodyCenterComponent) {
-      this.datas =[];
-      this.bodyCenter.getDatas(this.url, this.datas);
+      this.datas =bodyCenter.dataProduct;
+      //this.bodyCenter.getDatas(this.url, this.datas);
      }
   ngOnInit(): void {
   }

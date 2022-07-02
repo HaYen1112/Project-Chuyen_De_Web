@@ -2,15 +2,15 @@
 <div class="most-recent-area">
   <!-- Section Tittle -->
   <div class="small-tittle mb-20">
-      <h4 style="font-weight: bold;margin: 10px 0px 20px 10px;">Gần đây nhất</h4>
+      <h4 style="font-weight: bold;margin: 10px 0px 20px 10px;">Đồng hồ mới nhất</h4>
   </div>
-  <!-- Details -->
+  <!-- Details   -->
   <div class="most-recent mb-40" *ngFor="let data of dataMostRecent; let i =index">
       <div class="most-recent-img" *ngIf="i==0">
-          <img src={{data.image}} alt="">
-          <div class="most-recent-cap">
-              <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-              <p>{{data.time}}</p>
+          <img src="./assets/images/spe2.png" alt="">
+          <div class="most-recent-cap" *ngIf="i==0">
+              <h4><a href="/" target="blank">{{data.title}}</a></h4>
+              <p>Xem chi tiết</p>
           </div>
       </div>
   </div>
@@ -21,7 +21,7 @@
       </div>
       <div class="most-recent-capt" *ngIf="i>0">
           <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-          <p>{{data.time}}</p>
+          <p>{{data.price}}</p>
       </div>
   </div>
 

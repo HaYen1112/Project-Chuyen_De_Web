@@ -178,10 +178,14 @@
   }
   // Single
   .most-recent-single{
+    width: 305px;
       margin-bottom: 20px;
+      margin-left: 10px;
       display: flex;
       .most-recent-images{
+        margin-left: -15px;
           img{
+            filter: brightness(50%);
             width: 95px;
             height: 95px;
             margin-left: 15px;
@@ -197,6 +201,7 @@
             display: block;
             margin-bottom: 5px;
             a{
+              margin-top: 30px;
                 font-weight: 500;
                 line-height: 1.4;
                 font-size: 14px;

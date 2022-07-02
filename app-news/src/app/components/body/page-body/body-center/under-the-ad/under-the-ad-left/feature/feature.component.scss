@@ -23,6 +23,7 @@
               transform: scale(1);
               object-fit: cover;
               margin-left: 5px;
+              filter: brightness(80%);
           }
       }
       .whates-caption{
@@ -75,6 +76,7 @@
       img{
         width: 100px;
         height: 100px;
+        filter: brightness(80%);
         object-fit: cover;
       }
       .whats-right-cap{

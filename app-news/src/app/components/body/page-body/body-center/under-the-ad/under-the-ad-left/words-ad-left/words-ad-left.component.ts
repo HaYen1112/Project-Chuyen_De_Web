@@ -10,8 +10,8 @@ export class WordsAdLeftComponent implements OnInit {
   @Input() dataItem: any[];
   private urlLife = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fhome.rss'.trim();
     constructor(private underLeft: BodyCenterComponent) {
-      this.dataItem = [];
-      this.underLeft.getDatas(this.urlLife, this.dataItem);
+      this.dataItem = underLeft.dataProduct;
+     // this.underLeft.getDatas(this.urlLife, this.dataItem);
      }
   ngOnInit(): void {
   }

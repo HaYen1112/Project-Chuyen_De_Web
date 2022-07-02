@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="small-tittle mb-30">
-                                    <h4 style="margin-top: -10px;margin-bottom: 20px; font-weight: bold;">Tin tức mỗi ngày</h4>
+                                    <h4 style="margin-top: -10px;margin-bottom: 20px; font-weight: bold;">Đồng hồ bán chạy</h4>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
           <div class="row">
               <div class="col-lg-12">
                   <div class="section-tittle mb-30">
-                      <h3 style="margin-top: 30px;margin-bottom: 20px;margin-left: 10px; font-weight: bold;">Tin tức xu hướng</h3>
+                      <h3 style="margin-top: 30px;margin-bottom: 20px;margin-left: 10px; font-weight: bold;">Đồng hồ phổ biến</h3>
                   </div>
               </div>
           </div>
@@ -54,14 +54,13 @@
               <div class="col-12">
                   <div class="recent-active dot-style d-flex dot-style" *ngIf="show">
                       <!-- Single -->
-                      <div class="single-recent" *ngFor="let data of dataVideo; let i = index" [@animationPhoto]="images.length">
+                      <div class="single-recent" *ngFor="let data of dataKP; let i = index" [@animationPhoto]="images.length">
                           <div class="what-img">
                               <img src="{{data.image}}" alt="{{data.title}}">
                           </div>
                           <div class="what-cap">
                               <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
-                              <a class="popup-video btn-icon" href="{{data.link}}" target="blank"><span class="flaticon-play-button"><i class="fab fa-youtube"></i></span></a>
-                                <p>{{data.time}}</p>
+
                           </div>
                       </div>
                   </div>

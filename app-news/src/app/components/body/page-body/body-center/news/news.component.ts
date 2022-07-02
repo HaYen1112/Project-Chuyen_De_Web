@@ -27,20 +27,20 @@ export class NewsComponent implements OnInit {
   @Input() images = [1,2,3,4,5,6,7,8,9,10];
   @Input() dataKP: any[];
   @Input() dataVideo: any[];
-  @Input() dataLink: any[];
+  //@Input() dataLink: any[];
   show = true;
 
   urlKP ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Fvideo%2Fthoi-su.rss&api_key=8rhq1qggacg7vqdw0oxezforxw39rfhvlytwallw';
   urlVideo ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fgioi-tre%2Fket-noi.rss&api_key=1k25wgfmjkjyuixk5j6s3l2vabkshvjrpdvzhusf'
   constructor(private newBodyCenter: BodyCenterComponent) {
     //Khám phá
-    this.dataKP= [];
+    this.dataKP = newBodyCenter.dataProduct;
     //video
     this.dataVideo =[];
     //link
-    this.dataLink = [];
-    this.newBodyCenter.getDatas(this.urlKP, this.dataKP);
-    this.newBodyCenter.getDatas(this.urlVideo, this.dataVideo);
+    // this.dataLink = [];
+    // this.newBodyCenter.getDatas(this.urlKP, this.dataKP);
+    // this.newBodyCenter.getDatas(this.urlVideo, this.dataVideo);
 
   }
   ngOnInit() {

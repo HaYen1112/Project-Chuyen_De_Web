@@ -22,17 +22,17 @@ export class FeatureComponent implements OnInit {
   private urlTechnology = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fcong-nghe.rss'.trim();
   indexs = [0, 1];
   constructor(private bodyCenter: BodyCenterComponent) {
-      this.dataLife = [];
-      this.dataFashion = [];
-      this.dataSport = [];
+      this.dataLife = bodyCenter.dataProduct;
+      this.dataFashion = bodyCenter.dataProduct;
+      this.dataSport = bodyCenter.dataProduct;
       this.dataTechnology = [];
-      this.dataTravel = [];
+      this.dataTravel = bodyCenter.dataProduct;
 
-      this.bodyCenter.getDatas(this.urlLife, this.dataLife);
-      this.bodyCenter.getDatas(this.urlTravel, this.dataTravel);
-      this.bodyCenter.getDatas(this.urlFashion, this.dataFashion);
-      this.bodyCenter.getDatas(this.urlSport, this.dataSport);
-      this.bodyCenter.getDatas(this.urlTechnology, this.dataTechnology);
+      // this.bodyCenter.getDatas(this.urlLife, this.dataLife);
+      // this.bodyCenter.getDatas(this.urlTravel, this.dataTravel);
+      // this.bodyCenter.getDatas(this.urlFashion, this.dataFashion);
+      // this.bodyCenter.getDatas(this.urlSport, this.dataSport);
+      // this.bodyCenter.getDatas(this.urlTechnology, this.dataTechnology);
 
      }
 
