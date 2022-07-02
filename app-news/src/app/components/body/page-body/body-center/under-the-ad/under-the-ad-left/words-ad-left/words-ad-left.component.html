@@ -3,11 +3,11 @@
 <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="false">
   <!--  -->
   <ng-template ngbSlide *ngFor="let data of dataItem; let i = index">
-    <div class="picsum-img-wrapper" style="background-color: black;">
+    <div class="picsum-img-wrapper" style="background-color: white;">
       <img src="{{dataItem[0].image}}" alt="">
     </div>
-    <div class="carousel-caption">
-      <a href="/" target="blank">{{data.title}}</a>
+    <div class="carousel-caption"style="color: black;">
+      <a href="/" target="blank" style="color: black;">{{data.title}}</a>
       <p>{{data.decription}}</p>
     </div>
   </ng-template>
