@@ -1,0 +1,74 @@
+<footer>
+  <!-- Footer Start-->
+  <div class="footer-main footer-bg">
+      <div class="footer-area footer-padding">
+          <div class="container">
+              <div class="row d-flex justify-content-between">
+                  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
+                      <div class="single-footer-caption mb-50">
+                          <div class="footer-tittle">
+                              <b><h4 style="margin-top: 15px;">BÀI ĐĂNG PHỔ BIẾN</h4></b>
+                          </div>
+                          <!-- Popular post -->
+                          <div class="whats-right-single mb-20" *ngFor="let data of datas; let i = index">
+                              <div class="whats-right-img" *ngIf="6<i">
+                                  <img src="{{data.image}}" alt="">
+                              </div>
+                              <div class="whats-right-cap" *ngIf="6<i">
+                                  <h4><a href="{{data.link}}" target="blank"> {{data.title}} </a></h4>
+                                  <p> {{data.time}} </p>
+                              </div>
+                            </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7" style="margin-top: 60px;">
+                    <div class="single-footer-caption mb-50">
+                      <div class="whats-right-single mb-20" *ngFor="let data of datas; let i = index">
+                        <div class="whats-right-img">
+                            <img src="{{data.image}}" alt="" *ngIf="(2<i) && (i<6)" style="margin-bottom: 30px;">
+                        </div>
+                        <div class="whats-right-cap" *ngIf="(2<i) && (i<6)" style="margin-top: -10px;">
+                            <h4><a href="{{data.link}}" target="blank"> {{data.title}} </a></h4>
+                            <p> {{data.time}} </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                  <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                      <div class="single-footer-caption mb-60">
+                          <div class="banner" style="margin-left: -10px;">
+                            <div class="footer-tittle">
+                              <b><h4 style="margin-top: 70px;">LIÊN HỆ</h4></b>
+                          </div>
+                              <p class="info2">Hotline: 0844362969<br/>Liên hệ quảng cáo: 0342791496</p><br>
+                              <p class="info2" style="text-align: center;margin-left: -20px;">Tổng biên tập:<br>
+                                <strong>Trương Văn Xinh</strong> <br>
+                                Phó tổng biên tập thường trực:<br>
+                                <strong>Bùi Anh Tuấn</strong> <br>
+                                Phó tổng biên tập:<br> <strong>Lâm Hà Yến</strong> <br></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-bottom-area footer-bg">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                              <a href="https://datbao.thanhnien.vn" target="_blank">Đặt báo</a>
+                              <a href="https://quangcao.thanhnien.vn/">Quảng cáo</a>
+                              <a href="/rss.html">RSS</a>
+                              <a href="/toa-soan.html">Thông tin tòa soạn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- Footer End-->
+</footer>
+

@@ -1,0 +1,88 @@
+
+<div class="most-recent-area">
+  <!-- Section Tittle -->
+  <div class="small-tittle mb-20">
+      <h4 style="font-weight: bold;margin: 10px 0px 20px 10px;">Gần đây nhất</h4>
+  </div>
+  <!-- Details -->
+  <div class="most-recent mb-40" *ngFor="let data of dataMostRecent; let i =index">
+      <div class="most-recent-img" *ngIf="i==0">
+          <img src={{data.image}} alt="">
+          <div class="most-recent-cap">
+              <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+              <p>{{data.time}}</p>
+          </div>
+      </div>
+  </div>
+  <!-- Single -->
+  <div class="most-recent-single" *ngFor="let data of dataMostRecent; let i =index">
+      <div class="most-recent-images"*ngIf="i>0">
+          <img src={{data.image}} alt="" >
+      </div>
+      <div class="most-recent-capt" *ngIf="i>0">
+          <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+          <p>{{data.time}}</p>
+      </div>
+  </div>
+
+</div>
+<div class="single-follow mb-45">
+  <div class="single-box">
+      <div class="follow-us d-flex align-items-center">
+          <div class="follow-social">
+              <a href="#"><img src="assets/images/icon-fb.png" alt=""></a>
+          </div>
+          <div class="follow-count">
+              <span>8,045</span>
+              <p>Fans</p>
+          </div>
+      </div>
+      <div class="follow-us d-flex align-items-center">
+          <div class="follow-social">
+              <a href="#"><img src="assets/images/icon-tw.png" alt=""></a>
+          </div>
+          <div class="follow-count">
+              <span>8,045</span>
+              <p>Fans</p>
+          </div>
+      </div>
+          <div class="follow-us d-flex align-items-center">
+          <div class="follow-social">
+              <a href="#"><img src="assets/images/icon-ins.png" alt=""></a>
+          </div>
+          <div class="follow-count">
+              <span>8,045</span>
+              <p>Fans</p>
+          </div>
+      </div>
+      <div class="follow-us d-flex align-items-center">
+          <div class="follow-social">
+              <a href="#"><img src="assets/images/icon-yo.png" alt=""></a>
+          </div>
+          <div class="follow-count">
+              <span>8,045</span>
+              <p>Fans</p>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="news-container">
+    <h3>Tin công nghệ</h3>
+  </div>
+  <div class="news-container2">
+  </div>
+  <div class="story--text">
+    <div class="meta"  *ngFor="let data of dataCN; let i =index">
+      <div class="title" *ngIf="i<4">
+        <a href="{{data.link}}" target="blank"> {{data.title}}</a>
+      </div>
+      <div class="time"  *ngIf="i<4"><time>{{data.time}}</time></div>
+    </div>
+
+
+
+  </div>
+</div>
+
+

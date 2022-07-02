@@ -1,0 +1,221 @@
+.container{
+  width: 331px;
+  height:408px;
+  background-color:white;
+  margin-right: 0px;
+  float: left;
+  padding: 0px;
+  margin-left: 20px;
+  font-size: 15px;
+  box-shadow: 0 1px 7px #d9d9d9;
+  margin-bottom: 20px;
+
+  .news-container{
+    width:331px;
+    height:48px;
+    background-color:white;
+    margin-right: 0px;
+
+    h3{
+      margin-left:23px;
+      padding-top: 6px;
+      padding-bottom: -10px;
+    }
+  }
+
+  .story--text{
+    width:100%;
+    height: 100%;
+
+
+    .meta{
+      width:85%;
+      height: 90px;
+      margin-left: 27px;
+      padding-top: 12px;
+      border-bottom: 0.5px solid #eee;
+      .time{
+        float: left;
+        margin-right:10px;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      a{
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a:hover{
+        color: #00bfc5;
+      }
+
+    }
+  }
+}
+
+//follow
+.single-follow{
+  background: #fff;
+  padding: 30px 20px 30px 20px;
+  width: 331px;
+  height:190px;
+  float: right;
+  margin-bottom: 20px;
+  .single-box{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+  }
+  .follow-us{
+      background: rgba(248, 238, 238, 0.555);
+      border: 1px solid#f4f4f4;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      padding-left: 13px;
+      padding-right: 13px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      width: 49%;
+
+      .follow-count{
+          padding-left: 15px;
+          span{
+              color:#232323;
+              font-size: 14px;
+              font-weight: 500;
+          }
+          p{
+              margin-bottom: 0;
+              line-height: 1;
+              font-size: 11px;
+          }
+      }
+  }
+}
+
+//tin gần đây
+.most-recent-area:hover{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar{
+    width: 4px;
+    background: grey;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #00bfc5; }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+      background-color: #F5F5F5;
+      border-radius: 10px; }
+}
+.most-recent-area{
+  width: 331px;
+  height:570px;
+  background-color:white;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  img{
+    object-fit: cover;
+  }
+
+  .most-recent{
+    width: 325px;
+      .most-recent-img{
+          overflow: hidden;
+          position: relative;
+          &::before{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              bottom: 0;
+              content: "";
+          }
+          img{
+              width: 90%;
+              margin-left: 15px;
+              margin-bottom: 15px;
+              object-fit: cover;
+              filter: brightness(50%);
+          }
+          .most-recent-cap{
+              position: absolute;
+              bottom: 0px;
+              left: 31px;
+              span{
+                  color: #ffff;
+                  margin-bottom: 19px;
+              }
+              h4{
+                margin-bottom: 5px;
+                font-size: 14px;
+                margin-right: 20px;
+                 a{
+                      color: #fff;
+                      text-decoration: none;
+                      font-weight: 700;
+                      &:hover{
+                          color: #00bfc5;
+                      }
+                 }
+              }
+              p{
+                  color: #fff;
+                   font-size: 12px;
+                   margin-left: 10px;
+              }
+          }
+      }
+  }
+  // Single
+  .most-recent-single{
+      margin-bottom: 20px;
+      display: flex;
+      .most-recent-images{
+          img{
+            width: 95px;
+            height: 95px;
+            margin-left: 15px;
+
+          }
+      }
+      .most-recent-capt{
+        padding-left: 18px;
+        padding-right:5px ;
+        width: 200px;
+        h4{
+            font-size: 18px;
+            display: block;
+            margin-bottom: 5px;
+            a{
+                font-weight: 500;
+                line-height: 1.4;
+                font-size: 14px;
+                display: block;
+                margin-bottom: 10px;
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color: #00bfc5;
+                }
+            }
+        }
+        p{
+            color: #707b8e;
+            font-size: 12px;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+  }
+}
+

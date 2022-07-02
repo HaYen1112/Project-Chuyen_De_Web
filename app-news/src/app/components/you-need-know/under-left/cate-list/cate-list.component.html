@@ -1,0 +1,128 @@
+<div class="cate-list">
+    <div class="cate">
+        <h3><a href="" class="cate-name">TUYỂN DỤNG</a></h3>
+        <div class="content" *ngFor="let data of dataTD; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
+                    data-was-processed="true">
+                <div class="title">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
+            </div>
+            <div class="new" *ngIf='(i>0) '>
+                <div class="title-new">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time"><time>{{data.time}}</time></div>
+            </div>
+        </div>
+    </div>
+    <div class="cate">
+        <h3><a href="" class="cate-name">SẢN PHẨM</a></h3>
+        <div class="content" *ngFor="let data of dataSP; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
+                    data-was-processed="true">
+                <div class="title">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
+            </div>
+            <div class="new" *ngIf='(i>0) '>
+                <div class="title-new">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time"><time>{{data.time}}</time></div>
+            </div>
+        </div>
+    </div>
+    <div class="cate">
+        <h3><a href="" class="cate-name">GIẢI TRÍ</a></h3>
+        <div class="content" *ngFor="let data of dataGT; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
+                    data-was-processed="true">
+                <div class="title">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
+            </div>
+            <div class="new" *ngIf='(i>0) '>
+                <div class="title-new">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time"><time>{{data.time}}</time></div>
+            </div>
+        </div>
+    </div>
+    <div class="cate">
+        <h3><a href="" class="cate-name">DỊCH VỤ</a></h3>
+        <div class="content" *ngFor="let data of dataDV; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
+                    data-was-processed="true">
+                <div class="title">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
+            </div>
+            <div class="new" *ngIf='(i>0) '>
+                <div class="title-new">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time"><time>{{data.time}}</time></div>
+            </div>
+        </div>
+    </div>
+    <div class="cate">
+        <h3><a href="" class="cate-name">GIẢI THƯỞNG</a></h3>
+        <div class="content" *ngFor="let data of dataGTh; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
+                    data-was-processed="true">
+                <div class="title">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
+            </div>
+            <div class="new" *ngIf='(i>0) '>
+                <div class="title-new">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time"><time>{{data.time}}</time></div>
+            </div>
+        </div>
+    </div>
+    <div class="cate">
+        <h3><a href="" class="cate-name">THÔNG BÁO</a></h3>
+        <div class="content" *ngFor="let data of dataTB; let i=index">
+            <div class="first-new" *ngIf='i==0'>
+                <img data-src="{{data.image}}" alt="{{data.title}}" class="loaded" src="{{data.image}}"
+                    data-was-processed="true">
+                <div class="title">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time">
+                    <time>{{data.time}}</time>
+                </div>
+            </div>
+            <div class="new" *ngIf='(i>0) '>
+                <div class="title-new">
+                    <a href="{{data.link}}" target="blank">{{data.title}}</a>
+                </div>
+                <div class="time"><time>{{data.time}}</time></div>
+            </div>
+        </div>
+    </div>
+</div>
