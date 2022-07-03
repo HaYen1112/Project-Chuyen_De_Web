@@ -1,108 +1,31 @@
 
 <div class="site-header__content">
   <ul class="site-header__tool left btn-group">
-    <li class = "item item--ti" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-          [ngStyle]="{backgroundColor: colorBackgroundDHN}">
-      <a [routerLink]="['/bancanbiet']" [ngStyle]="{color: colorTextDHN}" class="parent">
+    <li class = "item item--ti"
+    (click)="setColor('nam')"   >
+      <a  [ngStyle]="{color:colorNam}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/imforProduct']"  class="parent">
         <i class="far fa-user"></i>
         <span>ĐỒNG HỒ NAM</span>
       </a>
     </li>
-    <li class = "item item--ti" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        [ngStyle]="{backgroundColor: colorBackgroundDHN}">
-      <a [routerLink]="['/bancanbiet']" [ngStyle]="{color: colorTextDHN}" class="parent">
+    <li class = "item item--ti" (click)="setColor('nu')"
+      >
+      <a [ngStyle]="{color:colorNu}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/imforProduct']" class="parent">
         <i class="far fa-user"></i>
         <span>ĐỒNG HỒ NỮ</span>
       </a>
     </li>
-    <li class = "item item--ti" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        [ngStyle]="{backgroundColor: colorBackgroundDHN}">
-      <a [routerLink]="['/bancanbiet']" [ngStyle]="{color: colorTextDHN}" class="parent">
+    <li class = "item item--ti" (click)="setColor('treem')"
+    >
+      <a [ngStyle]="{color:colorTE}"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/imforProduct']" class="parent">
         <i class="far fa-user"></i>
         <span>ĐỒNG HỒ TRẺ EM</span>
       </a>
     </li>
-
-    <!-- <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL, marginTop: marginTopDHNU}">
-      <a [routerLink]="['/#']"  class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
-        <i class="fas fa-briefcase" [ngStyle]="{display: displayVL1}" style="margin-bottom: 5px;"></i>
-        <div class="close-container" [ngStyle]="{display: displayVL2}">
-          <div class="leftright"></div>
-          <div class="rightleft"></div>
-        </div>
-        <span>ĐỒNG HỒ NỮ</span>
-      </a>
-      <div class="dropdown-menu-vl" [ngStyle]="{display: displayVL2}">
-        <div class="content content-vl">
-          <li class = "item-vl item--td">
-            <a href="#tuyendung" class="parent">
-              <i class="fas fa-address-card"></i>
-              <span>  TUYỂN DỤNG </span>
-            </a>
-          </li>
-          <li class = "item-vl item--camnang">
-            <a href="#camnang" class="parent">
-              <i class="fas fa-atlas"></i>
-              <span> CẨM NANG </span>
-            </a>
-          </li>
-          <li class = "item-vl item--call">
-            <a href="#call" class="parent">
-              <i class="fas fa-phone-volume"></i>
-              <span> 08008052220 </span>
-            </a>
-          </li>
-
-
-        </div>
-        </div>
-    </li> -->
-
-    <!-- <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundDanhMuc, marginTop: marginTopDHTE}">
-      <a [routerLink]="['/#']"  class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('donghotreem')" [ngStyle]="{color: colorTextDanhMuc}">
-        <i class="fas fa-briefcase" [ngStyle]="{display: displayCM1}" style="margin-bottom: 5px;"></i>
-        <div class="close-container" [ngStyle]="{display: displayCM2}">
-          <div class="leftright"></div>
-          <div class="rightleft"></div>
-        </div>
-        <span>ĐỒNG HỒ TRẺ EM</span>
-      </a>
-      <div class="dropdown-menu-vl" [ngStyle]="{display: displayCM2}">
-        <div class="content content-vl">
-          <li class = "item-vl item--td">
-            <a href="#tuyendung" class="parent">
-              <i class="fas fa-address-card"></i>
-              <span>  TUYỂN DỤNG </span>
-            </a>
-          </li>
-          <li class = "item-vl item--camnang">
-            <a href="#camnang" class="parent">
-              <i class="fas fa-atlas"></i>
-              <span> CẨM NANG </span>
-            </a>
-          </li>
-          <li class = "item-vl item--call">
-            <a href="#call" class="parent">
-              <i class="fas fa-phone-volume"></i>
-              <span> 08008052220 </span>
-            </a>
-          </li>
-
-
-        </div>
-        </div>
-    </li> -->
-
-    <!-- <li class = "item item--dcb"[ngStyle]="{paddingTop: paddingBCB + size + 'px' }">
-      <a [routerLink]="['/', routerBCB]" class="parent">
-        <i [ngStyle]="{display: displayBCB}" class="far fa-lightbulb"></i>
-        <span [ngStyle]="{fontWeight: fontw}"> {{titleBCB}} </span>
-      </a>
-    </li> -->
   </ul>
   <h1 class = "logo" [ngStyle]="{paddingTop: paddingHome + 'px'}">
-    <a [routerLink]="['/', routerHome]" class = "logo-index">
-     <b><span style="font-family: inherit; font-size: 25px;" >{{titleHome}} </span></b>
+    <a [routerLink]="['/']" class = "logo-index">
+     <b><span style="font-family: inherit; font-size: 25px;" >THỜI THƯỢNG </span></b>
       <h6 [ngStyle]="{display: displayHome}" style="font-size: 14px;">WATCHSTORE</h6>
     </a>
   </h1>
@@ -123,34 +46,17 @@
           </div>
         </div>
       </li>
-    <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundDCB, marginTop: marginTopGH}">
-      <a href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
-        <i class="far fa-bell" [ngStyle]="{display: displayTM1}" style="margin-bottom: 5px;"></i>
-        <div class="close-container" [ngStyle]="{display: displayTM2}">
-          <div class="leftright"></div>
-          <div class="rightleft"></div>
-        </div>
+    <li class = "item item--ti">
+      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/shoppingcart']" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" >
+        <i class="far fa-bell"></i>
         <span>GIỎ HÀNG</span>
           <!-- <img _ngcontent-nyt-c18="" width="25px" height="25px" src="assets/images/icon.gif" data-was-processed="true" class="loading" style="margin-top: -5px;"> -->
       </a>
-      <div class="dropdown-menu-tm" [ngStyle]="{display: displayTM2}">
-        <div class="content content-tm">
-          <div class="item" *ngFor="let data of dataTM; let i=index">
-            <div class="meta">
-              <time>{{data.time}}</time>
-            </div>
-            <a href="{{data.link}}" target="blank">{{data.title}}</a>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class = "item item--lh dropdown" [ngStyle]="{backgroundColor: colorBackgroundLH, marginTop: marginTopLH}">
+
+    <li class = "item item--lh dropdown" [ngStyle]="{color: colorLH}">
       <a href="#lienhe" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('lienhe')" [ngStyle]="{color: colorTextLH}">
-        <i class="far fa-envelope" [ngStyle]="{display: displayLH1}" style="margin-bottom: 5px;"></i>
-        <div class="close-container" [ngStyle]="{display: displayLH2}">
-          <div class="leftright"></div>
-          <div class="rightleft"></div>
-        </div>
+        <i class="far fa-envelope"></i>
+
         <span>LIÊN HỆ</span>
       </a>
       <div class="dropdown-menu-lh" [ngStyle]="{display: displayLH2}">
@@ -178,9 +84,8 @@
         </div>
       </div>
     </li>
-    <li class = "item item--dn" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-          [ngStyle]="{backgroundColor: colorBackgroundDN}">
-      <a [routerLink]="['/dangnhap']" [ngStyle]="{color: colorTextDN}" class="parent">
+    <li class = "item item--dn">
+      <a  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangnhap']" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
