@@ -26,6 +26,8 @@
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 5px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 .whats-news-area .whats-news-single .whates-caption h4 a, .about-area2 .whats-news-single .whates-caption h4 a, .contact-section .whats-news-single .whates-caption h4 a {
@@ -76,6 +78,8 @@
 .whats-news-area .whats-right-single img, .about-area2 .whats-right-single img, .contact-section .whats-right-single img {
   width: 100px;
   height: 100px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
   -o-object-fit: cover;
      object-fit: cover;
 }

@@ -41,7 +41,7 @@
     float: left;
     padding: 0px;
     margin:0px;
-    margin-top: 12px;
+    margin-top: -2px;
     a{
       color: #fff;
       text-decoration: none;
@@ -50,7 +50,8 @@
       border-right: 0.1px solid rgb(22, 211, 211);
     }
     .item--vl{
-      border-left: 0.1px solid rgb(22, 211, 211);
+      border-left: 0.1px
+       solid rgb(22, 211, 211);
     }
     .item--dm{
       border-right: 0.1px solid rgb(22, 211, 211);
@@ -70,10 +71,11 @@
       text-align: center;
       height:75px;
       float: left;
-      margin-top: 2px;
+      margin-top: 12px;
       padding-left: 10px;
       padding-right: 10px;
       list-style-type:none;
+
       :hover{
         color: black;
       }
@@ -102,6 +104,7 @@
  left: -10px;
  top: 50px;
  left: 0px;
+ z-index: 1000;
  .content-ti{
    height:100%;
    font-size: 14px;
@@ -153,10 +156,11 @@
   width: 1265px;
   background-color: #F5F5F5;
   padding: 0;
-  top: 60px;
+  top: 57px;
   left: 0px;
   display: block;
   position: fixed;
+  z-index: 1000;
 .content{
   text-decoration: none;
   text-align: left;
@@ -196,6 +200,7 @@ left: 0px;
 top: 50px;
 display: block;
 position: fixed;
+z-index: 1000;
 .content-lh{
   height:100%;
   font-size: 14px;
@@ -241,6 +246,7 @@ position: fixed;
   top: 50px;
   display: block;
   position: fixed;
+  z-index: 1000;
   .content-vl{
     height:100%;
     font-size: 14px;
@@ -305,6 +311,7 @@ position: fixed;
   position: fixed;
   display: block;
   background-color: #F5F5F5;
+  z-index: 1000;
   .content-tm{
     height:400px;
     display: block;
@@ -346,6 +353,7 @@ position: fixed;
     position: fixed;
     display: block;
     background-color: white;
+    z-index: 1000;
     padding: 0;
     margin-left: -15px;
     margin-top: 69px;

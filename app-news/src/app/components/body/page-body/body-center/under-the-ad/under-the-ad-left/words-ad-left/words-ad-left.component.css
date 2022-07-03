@@ -4,10 +4,10 @@
 }
 
 .picsum-img-wrapper img {
-  height: 390px;
-  width: 650px;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  height: 230px;
+  width: 350px;
+  margin-top: 50px;
+  margin-left: 140px;
 }
 
 .carousel-caption {
