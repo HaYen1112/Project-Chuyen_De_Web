@@ -32,13 +32,16 @@ import { HotNewComponent } from './components/you-need-know/under-left/hot-new/h
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './components/login/signup/signup.component';
+import { FormSignupComponent } from './components/login/signup/form-signup/form-signup.component';
 
 
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
   { path: 'bancanbiet', component: YouNeedKnowComponent},
-  { path: 'dangnhap', component: LoginComponent}
+  { path: 'dangnhap', component: LoginComponent},
+  { path: 'dangky', component: SignupComponent},
 ];
 @NgModule({
   declarations: [
@@ -68,6 +71,8 @@ const route: Routes = [
     FormLoginComponent,
     CateListComponent,
     HotNewComponent,
+    SignupComponent,
+    FormSignupComponent,
 
   ],
   imports: [
