@@ -19,7 +19,7 @@
                 <form action="#" class="signin-form">
                   <div class="form-group mt-3">
                     <input type="text" class="form-control" required>
-                    <label class="form-control-placeholder" for="username">Username</label>
+                    <label class="form-control-placeholder" for="username">Email</label>
                   </div>
                   <div class="form-group">
                     <input id="password-field" type="password" class="form-control" required>
@@ -41,7 +41,9 @@
                     </div>
                   </div>
                 </form>
-                <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+                <p class="text-center" >Not a member?
+                 <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangky']"  class="parent">Sign Up</a></p>
+
               </div>
             </div>
           </div>

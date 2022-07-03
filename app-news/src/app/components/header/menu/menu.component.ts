@@ -27,24 +27,28 @@ export class MenuComponent implements OnInit {
   marginTopTK: string = '12px';
   marginTopGH: string = '12px';
   marginTopLH: string = '12px';
+  colorTextDHN = '';
+  border = '';
+  colorTextDHNU = '';
+  colorBackgroundDHNU = '';
+
   constructor(private menu: AppComponent, private router: Router) {
     this.dataTM = [];
     this.setDataTM(this.urlNew);
     this.colorTextDN = '';
     this.colorBackgroundDN = '';
     this.keyword = '';
+    this.colorTextDHN = '';
+    this.border = '';
+
 
     if (this.router.url == '/bancanbiet') {
-      this.titleBCB = 'TIN TỨC NHANH';
-      this.titleHome = 'BẠN CẦN BIẾT';
-      this.paddingHome = 10;
-      this.paddingBCB = 15;
-      this.displayHome = 'none';
-      this.displayBCB = 'none'
-      this.fontw = 'bold';
-      this.routerBCB = '/';
-      this.routerHome = 'bancanbiet';
-      this.size = 15;
+      this.titleHome = 'THỜI THƯỢNG';
+      this.titleBCB = 'BẠN CẦN BIẾT';
+      this.paddingBCB = 10;
+      this.colorTextDHN = 'black';
+      this.colorBackgroundDHN = '#68838B';
+
 
     }
 
@@ -61,11 +65,18 @@ export class MenuComponent implements OnInit {
       this.routerHome = '/';
     }
     if (this.router.url == '/dangnhap') {
-      this.titleHome = 'TIN TỨC NHANH';
+      this.titleHome = 'THỜI THƯỢNG';
       this.titleBCB = 'BẠN CẦN BIẾT';
       this.paddingBCB = 10;
       this.colorTextDN = 'black';
-      this.colorBackgroundDN = 'white';
+      this.colorBackgroundDN = '#68838B';
+    }
+    if (this.router.url == '/dangky') {
+      this.titleHome = 'THỜI THƯỢNG';
+      this.titleBCB = 'BẠN CẦN BIẾT';
+      this.paddingBCB = 10;
+      this.colorTextDN = 'black';
+      this.colorBackgroundDN = '#68838B';
     }
     if (this.router.url == '/search') {
       this.titleHome = 'TIN TỨC NHANH';
@@ -213,6 +224,7 @@ export class MenuComponent implements OnInit {
   colorTextVL = ''; colorBackgroundVL = '';
   colorTextDN = ''; colorBackgroundDN = '';
   colorTextLH = ''; colorBackgroundLH = '';
+  colorBackgroundDHN = '';
   displayclose = ''; indDM = 0; indTI = 0; indTK = 0;
   indDCB = 0; indVL = 0; indLH = 0; indDN = 0;
 
