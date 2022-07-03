@@ -1,7 +1,7 @@
 
 <div class="site-header__content">
   <ul class="site-header__tool left btn-group">
-    <li class = "item item--ti dropdown" [ngStyle]="{backgroundColor: colorBackgroundTienIch}">
+    <li class = "item item--ti dropdown" [ngStyle]="{backgroundColor: colorBackgroundTienIch, marginTop : marginTopDHN}">
       <a (click)="setColor('tienich')" [ngStyle]="{color: colorTextTienIch}" href="#tienich" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
         <i class="fas fa-puzzle-piece" [ngStyle]="{display: displayTI1}" style="margin-bottom: 5px;"></i>
         <div class="close-container" [ngStyle]="{display: displayTI2}">
@@ -70,7 +70,7 @@
         </div>
       </div>
     </li>
-    <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
+    <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL, marginTop: marginTopDHNU}">
       <a [routerLink]="['/#']"  class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
         <i class="fas fa-briefcase" [ngStyle]="{display: displayVL1}" style="margin-bottom: 5px;"></i>
         <div class="close-container" [ngStyle]="{display: displayVL2}">
@@ -105,16 +105,16 @@
         </div>
     </li>
 
-    <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundVL}">
-      <a [routerLink]="['/#']"  class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('vieclam')" [ngStyle]="{color: colorTextVL}">
-        <i class="fas fa-briefcase" [ngStyle]="{display: displayVL1}" style="margin-bottom: 5px;"></i>
-        <div class="close-container" [ngStyle]="{display: displayVL2}">
+    <li class = "item item--vl" [ngStyle]="{backgroundColor: colorBackgroundDanhMuc, marginTop: marginTopDHTE}">
+      <a [routerLink]="['/#']"  class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('donghotreem')" [ngStyle]="{color: colorTextDanhMuc}">
+        <i class="fas fa-briefcase" [ngStyle]="{display: displayCM1}" style="margin-bottom: 5px;"></i>
+        <div class="close-container" [ngStyle]="{display: displayCM2}">
           <div class="leftright"></div>
           <div class="rightleft"></div>
         </div>
         <span>ĐỒNG HỒ TRẺ EM</span>
       </a>
-      <div class="dropdown-menu-vl" [ngStyle]="{display: displayVL2}">
+      <div class="dropdown-menu-vl" [ngStyle]="{display: displayCM2}">
         <div class="content content-vl">
           <li class = "item-vl item--td">
             <a href="#tuyendung" class="parent">
@@ -154,9 +154,9 @@
     </a>
   </h1>
   <ul class="site-header__tool right btn-group">
-      <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem}">
+      <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem, marginTop: marginTopTK}">
         <a (click)="setColor('timkiem')" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
-          <i class="fas fa-search" [ngStyle]="{display: displayTK1}" style="margin-bottom: 5px;"></i>
+          <i class="fas fa-search" [ngStyle]="{display: displayTK1}" style="margin-bottom: 0px;"></i>
           <div class="close-container" [ngStyle]="{display: displayTK2}">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -170,7 +170,7 @@
           </div>
         </div>
       </li>
-    <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundDCB}">
+    <li class = "item item--bcb" [ngStyle]="{backgroundColor: colorBackgroundDCB, marginTop: marginTopGH}">
       <a href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('danhchoban')" [ngStyle]="{color: colorTextDCB}">
         <i class="far fa-bell" [ngStyle]="{display: displayTM1}" style="margin-bottom: 5px;"></i>
         <div class="close-container" [ngStyle]="{display: displayTM2}">
@@ -191,7 +191,7 @@
         </div>
       </div>
     </li>
-    <li class = "item item--lh dropdown" [ngStyle]="{backgroundColor: colorBackgroundLH}">
+    <li class = "item item--lh dropdown" [ngStyle]="{backgroundColor: colorBackgroundLH, marginTop: marginTopLH}">
       <a href="#lienhe" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('lienhe')" [ngStyle]="{color: colorTextLH}">
         <i class="far fa-envelope" [ngStyle]="{display: displayLH1}" style="margin-bottom: 5px;"></i>
         <div class="close-container" [ngStyle]="{display: displayLH2}">

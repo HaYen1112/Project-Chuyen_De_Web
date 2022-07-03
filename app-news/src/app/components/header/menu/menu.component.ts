@@ -14,25 +14,19 @@ export class MenuComponent implements OnInit {
   @Input() dataTM: any[];
   private urlNew = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fthanhnien.vn%2Frss%2Fthoi-su.rss&api_key=geidhyghyfmctbkyu9epa976k5ofgyqw7mkbuufa';
   @Input() dataCM: any[] = [
-    { header: 'VIDEO', data: ['THỜI SỰ', 'PHÓNG SỰ', 'GIẢI TRÍ', 'MÓN NGON', 'THỂ THAO', 'THẾ GIỚI', 'TRỰC TUYẾN'] },
-    { header: 'THỜI SỰ', data: ['CHÍNH TRỊ', 'PHÁP LUẬT', 'DÂN SINH', 'LAO ĐỘNG - VIỆC LÀM', 'QUYỀN ĐƯỢC BIẾT', 'PHÓNG SỰ / ĐIỀU TRA', 'QUỐC PHÒNG', 'VƯỢT QUA COVID-19'] },
-    { header: 'THẾ GIỚI', data: ['KINH TẾ THẾ GIỚI', 'QUÂN SỰ', 'GÓC NHÌN', 'HỒ SƠ', 'NGƯỜI VIỆT NĂM CHÂU', 'CHUYỆN LẠ'] },
-    { header: 'VĂN HÓA', data: ['CÂU CHUYỆN VĂN HÓA', 'KHẢO CỨU', 'XEM - NGHE', 'HÀ NỘI THÀNH PHỐ TÔI YÊU', 'SỐNG ĐẸP', 'MÓN NGON HÀ NỘI'] },
-    { header: 'GIẢI TRÍ', data: ['PHIM', 'TRUYỀN HÌNH', 'ĐỜI NGHỆ SĨ'] },
-    { header: 'THỂ THAO', data: ['EURO 2020', 'BÓNG ĐÁ VIỆT NAM', 'SÔI ĐỘNG CÙNG V-LEAGUE', 'BÓNG ĐÁ QUỐC TẾ', 'TIN CHUYỂN NHƯỢNG', 'BÓNG RỔ', 'THỂ THAO & CỘNG ĐỒNG', 'THỂ THAO KHÁC'] },
-    { header: 'ĐỜI SỐNG', data: ['NGƯỜI SỐNG QUANH TA', 'GIA ĐÌNH', 'ẨM THỰC', 'CỘNG ĐỒNG', 'GƯƠNG SÁNG BIÊN CƯƠNG'] },
-    { header: 'TÀI CHÍNH - KINH DOANH', data: ['KINH TẾ XANH', 'CHÍNH SÁCH & PHÁT TRIỂN', 'NGÂN HÀNG', 'CHỨNG KHOÁN', 'DOANH NGHIỆP', 'DOANH NHÂN', 'TIÊU DÙNG', 'LÀM GIÀU', 'ĐỊA ỐC'] },
-    { header: 'GIỚI TRẺ', data: ['SỐNG -YÊU - ĂN - CHƠI', 'THẾ GIỚI MẠNG', 'KẾT NỐI', 'ĐOÀN - HỘI'] },
-    { header: 'GIÁO DỤC', data: ['TUYỂN SINH 2021', 'HỘP TƯ VẤN 24/7', 'DU HỌC', 'CHỌN NGHỀ', 'CHỌN TRƯỜNG', 'NGƯỜI THẦY', 'CẨM NANG TUYỂN SINH 2021'] },
-    { header: 'CÔNG NGHỆ', data: ['XU HƯỚNG', 'SẢN PHẨM MỚI', 'KINH NGHIỆM', 'Ý TƯỞNG', 'CHUYỂN ĐỔI SỐ'] },
-    { header: 'GAME', data: ['ESPORTS', 'THỦ THUẬT', 'PHÒNG MÁY', 'CÔNG NGHỆ GAME', 'CỘNG ĐỒNG', 'VIDEO'] },
-    { header: 'SỨC KHỎE', data: ['LÀM ĐẸP', 'KHỎE ĐẸP MỖI NGÀY', 'GIỚI TÍNH', 'SỐNG VUI KHỎE'] },
-    { header: 'DU LỊCH', data: ['KHÁM PHÁ', 'A - Z', 'SĂN TOUR'] },
-    { header: 'XE', data: ['THỊ TRƯỜNG XE', 'TƯ VẤN XE', 'DIỄN ĐÀN XE', 'ĐÁNH GIÁ XE', 'KHÁM PHÁ XE', 'VIDEO'] }
+
   ];
 
   routerHome: string = '/';
   routerBCB: string = 'bancanbiet';
+  displayTE1: string = '';
+  displayTE2: string = '';
+  marginTopDHN: string = '12px';
+  marginTopDHNU: string = '12px';
+  marginTopDHTE: string = '12px';
+  marginTopTK: string = '12px';
+  marginTopGH: string = '12px';
+  marginTopLH: string = '12px';
   constructor(private menu: AppComponent, private router: Router) {
     this.dataTM = [];
     this.setDataTM(this.urlNew);
@@ -53,6 +47,7 @@ export class MenuComponent implements OnInit {
       this.size = 15;
 
     }
+
     if (this.router.url == '/') {
       this.titleHome = 'THỜI THƯỢNG';
       this.titleBCB = 'BẠN CẦN BIẾT';
@@ -128,14 +123,19 @@ export class MenuComponent implements OnInit {
     this.displayTK1 = 'block'; this.displayTK2 = 'none';
     this.displayLH1 = 'block'; this.displayLH2 = 'none';
     this.displayTM1 = 'block'; this.displayTM2 = 'none';
-    if (index == 'chuyenmuc') {
+    this.displayTE1 = 'block'; this.displayTE2 = 'none';
+    this.marginTopDHN = '12px'; this.marginTopDHNU = '12px'; this.marginTopDHTE = '12px';
+    this.marginTopTK = '12px'; this.marginTopGH = '12px'; this.marginTopLH = '12px';
+    if (index == 'donghotreem') {
       this.colorBackgroundDanhMuc = 'white'; this.colorTextDanhMuc = 'black';
       this.displayCM2 = 'block'; this.displayCM1 = 'none';
+      this.marginTopDHTE = '2px';
       this.indDM++;
       if (this.indDM > 1) {
         this.colorBackgroundDanhMuc = ''; this.colorTextDanhMuc = '';
         this.displayCM1 = 'block'; this.displayCM2 = 'none';
         this.indDM = 0;
+        this.marginTopDHTE = '12px';
       }
       this.indTK = 0; this.indTI = 0; this.indDCB = 0; this.indVL = 0; this.indLH = 0;
     }
@@ -143,45 +143,55 @@ export class MenuComponent implements OnInit {
       this.colorTextTienIch = 'black'; this.colorBackgroundTienIch = 'white';
       this.indTI++; this.displayTI2 = 'block'; this.displayTI1 = 'none';
       this.indTK = 0; this.indDM = 0; this.indDCB = 0; this.indVL = 0; this.indLH = 0;
+      this.marginTopDHN = '2px';
       if (this.indTI > 1) {
         this.displayTI1 = 'block'; this.displayTI2 = 'none';
         this.colorTextTienIch = ''; this.colorBackgroundTienIch = '';
         this.indTI = 0;
+        this.marginTopDHN = '12px';
       }
     }
     if (index == 'timkiem') {
       this.colorTextTimKiem = 'black'; this.colorBackgroundTimKiem = 'white';
       this.indTK++; this.displayTK2 = 'block'; this.displayTK1 = 'none';
+      this.marginTopTK = '2px';
       if (this.indTK > 1) {
         this.colorTextTimKiem = ''; this.colorBackgroundTimKiem = '';
         this.indTK = 0; this.displayTK1 = 'block'; this.displayTK2 = 'none';
+        this.marginTopTK = '12px';
       }
       this.indDM = 0; this.indTI = 0; this.indDCB = 0; this.indVL = 0; this.indLH = 0;
     }
     if (index == 'danhchoban') {
       this.colorTextDCB = 'black'; this.colorBackgroundDCB = 'white';
       this.indDCB++; this.displayTM2 = 'block'; this.displayTM1 = 'none';
+      this.marginTopGH = '2px';
       if (this.indDCB > 1) {
         this.colorTextDCB = ''; this.colorBackgroundDCB = '';
         this.indDCB = 0; this.displayTM1 = 'block'; this.displayTM2 = 'none';
+        this.marginTopGH = '12px';
       }
       this.indDM = 0; this.indTI = 0; this.indTK = 0; this.indVL = 0; this.indLH = 0;
     }
     if (index == 'vieclam') {
       this.colorTextVL = 'black'; this.colorBackgroundVL = 'white';
       this.indVL++; this.displayVL2 = 'block'; this.displayVL1 = 'none';
+      this.marginTopDHNU = '2px';
       if (this.indVL > 1) {
         this.displayVL1 = 'block'; this.displayVL2 = 'none';
         this.colorTextVL = ''; this.colorBackgroundVL = ''; this.indVL = 0;
+        this.marginTopDHNU = '12px';
       }
       this.indDM = 0; this.indTI = 0; this.indDCB = 0; this.indTK = 0; this.indLH = 0;
     }
     if (index == 'lienhe') {
       this.colorTextLH = 'black'; this.colorBackgroundLH = 'white';
       this.indLH++; this.displayLH2 = 'block'; this.displayLH1 = 'none';
+      this.marginTopLH = '2px';
       if (this.indLH > 1) {
         this.colorTextLH = ''; this.colorBackgroundLH = ''; this.indLH = 0;
         this.displayLH1 = 'block'; this.displayLH2 = 'none';
+        this.marginTopLH = '12px';
       }
       this.indDM = 0; this.indTI = 0; this.indDCB = 0; this.indVL = 0; this.indTK = 0;
     }
