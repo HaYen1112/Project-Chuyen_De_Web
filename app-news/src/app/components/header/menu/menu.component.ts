@@ -17,8 +17,7 @@ export class MenuComponent implements OnInit {
 
   ];
 
-  routerHome: string = '/';
-  routerBCB: string = 'bancanbiet';
+
   displayTE1: string = '';
   displayTE2: string = '';
   marginTopDHN: string = '12px';
@@ -31,6 +30,12 @@ export class MenuComponent implements OnInit {
   border = '';
   colorTextDHNU = '';
   colorBackgroundDHNU = '';
+  colorGH = 'white';
+  colorLH = 'white';
+  colorDN = 'white';
+  colorTE = 'white';
+  colorNam = 'white';
+  colorNu = 'white';
 
   constructor(private menu: AppComponent, private router: Router) {
     this.dataTM = [];
@@ -40,49 +45,6 @@ export class MenuComponent implements OnInit {
     this.keyword = '';
     this.colorTextDHN = '';
     this.border = '';
-
-
-    if (this.router.url == '/bancanbiet') {
-      this.titleHome = 'THỜI THƯỢNG';
-      this.titleBCB = 'BẠN CẦN BIẾT';
-      this.paddingBCB = 10;
-      this.colorTextDHN = 'black';
-      this.colorBackgroundDHN = '#68838B';
-
-
-    }
-
-    if (this.router.url == '/') {
-      this.titleHome = 'THỜI THƯỢNG';
-      this.titleBCB = 'BẠN CẦN BIẾT';
-      this.paddingHome = 0;
-      this.paddingBCB = 10;
-      this.displayHome = '';
-      this.displayBCB = ''
-      this.fontw = '';
-      this.size = 0;
-      this.routerBCB = 'bancanbiet';
-      this.routerHome = '/';
-    }
-    if (this.router.url == '/dangnhap') {
-      this.titleHome = 'THỜI THƯỢNG';
-      this.titleBCB = 'BẠN CẦN BIẾT';
-      this.paddingBCB = 10;
-      this.colorTextDN = 'black';
-      this.colorBackgroundDN = '#68838B';
-    }
-    if (this.router.url == '/dangky') {
-      this.titleHome = 'THỜI THƯỢNG';
-      this.titleBCB = 'BẠN CẦN BIẾT';
-      this.paddingBCB = 10;
-      this.colorTextDN = 'black';
-      this.colorBackgroundDN = '#68838B';
-    }
-    if (this.router.url == '/search') {
-      this.titleHome = 'TIN TỨC NHANH';
-      this.titleBCB = 'BẠN CẦN BIẾT';
-      this.paddingBCB = 10;
-    }
   }
 
   navigationExtras?: NavigationExtras;
@@ -120,8 +82,8 @@ export class MenuComponent implements OnInit {
         }
       });
   }
+
   setColor(index: any) {
-    this.colorTextDN = ''; this.colorBackgroundDN = '#00bfc5';
     this.colorTextDanhMuc = ''; this.colorBackgroundDanhMuc = '';
     this.colorTextTienIch = ''; this.colorBackgroundTienIch = '';
     this.colorTextTimKiem = ''; this.colorBackgroundTimKiem = '';
@@ -135,35 +97,27 @@ export class MenuComponent implements OnInit {
     this.displayLH1 = 'block'; this.displayLH2 = 'none';
     this.displayTM1 = 'block'; this.displayTM2 = 'none';
     this.displayTE1 = 'block'; this.displayTE2 = 'none';
+
     this.marginTopDHN = '12px'; this.marginTopDHNU = '12px'; this.marginTopDHTE = '12px';
     this.marginTopTK = '12px'; this.marginTopGH = '12px'; this.marginTopLH = '12px';
-    if (index == 'donghotreem') {
-      this.colorBackgroundDanhMuc = 'white'; this.colorTextDanhMuc = 'black';
-      this.displayCM2 = 'block'; this.displayCM1 = 'none';
-      this.marginTopDHTE = '2px';
-      this.indDM++;
-      if (this.indDM > 1) {
-        this.colorBackgroundDanhMuc = ''; this.colorTextDanhMuc = '';
-        this.displayCM1 = 'block'; this.displayCM2 = 'none';
-        this.indDM = 0;
-        this.marginTopDHTE = '12px';
-      }
-      this.indTK = 0; this.indTI = 0; this.indDCB = 0; this.indVL = 0; this.indLH = 0;
+    if (index == 'nam' && this.router.url == '/imforProduct' ) {
+      this.colorNam = 'black';
+      this.colorTE = 'white';
+      this.colorNu = 'white';
     }
-    if (index == 'tienich') {
-      this.colorTextTienIch = 'black'; this.colorBackgroundTienIch = 'white';
-      this.indTI++; this.displayTI2 = 'block'; this.displayTI1 = 'none';
-      this.indTK = 0; this.indDM = 0; this.indDCB = 0; this.indVL = 0; this.indLH = 0;
-      this.marginTopDHN = '2px';
-      if (this.indTI > 1) {
-        this.displayTI1 = 'block'; this.displayTI2 = 'none';
-        this.colorTextTienIch = ''; this.colorBackgroundTienIch = '';
-        this.indTI = 0;
-        this.marginTopDHN = '12px';
-      }
+    if (index == 'nu' && this.router.url == '/imforProduct' ) {
+      this.colorNu = 'black';
+      this.colorNam = 'white';
+      this.colorTE = 'white';
     }
+    if (index == 'treem' && this.router.url == '/imforProduct' ) {
+      this.colorTE = 'black';
+      this.colorNam = 'white';
+      this.colorNu = 'white';
+    }
+
     if (index == 'timkiem') {
-      this.colorTextTimKiem = 'black'; this.colorBackgroundTimKiem = 'white';
+      this.colorTextTimKiem = 'black';
       this.indTK++; this.displayTK2 = 'block'; this.displayTK1 = 'none';
       this.marginTopTK = '2px';
       if (this.indTK > 1) {
@@ -173,30 +127,8 @@ export class MenuComponent implements OnInit {
       }
       this.indDM = 0; this.indTI = 0; this.indDCB = 0; this.indVL = 0; this.indLH = 0;
     }
-    if (index == 'danhchoban') {
-      this.colorTextDCB = 'black'; this.colorBackgroundDCB = 'white';
-      this.indDCB++; this.displayTM2 = 'block'; this.displayTM1 = 'none';
-      this.marginTopGH = '2px';
-      if (this.indDCB > 1) {
-        this.colorTextDCB = ''; this.colorBackgroundDCB = '';
-        this.indDCB = 0; this.displayTM1 = 'block'; this.displayTM2 = 'none';
-        this.marginTopGH = '12px';
-      }
-      this.indDM = 0; this.indTI = 0; this.indTK = 0; this.indVL = 0; this.indLH = 0;
-    }
-    if (index == 'vieclam') {
-      this.colorTextVL = 'black'; this.colorBackgroundVL = 'white';
-      this.indVL++; this.displayVL2 = 'block'; this.displayVL1 = 'none';
-      this.marginTopDHNU = '2px';
-      if (this.indVL > 1) {
-        this.displayVL1 = 'block'; this.displayVL2 = 'none';
-        this.colorTextVL = ''; this.colorBackgroundVL = ''; this.indVL = 0;
-        this.marginTopDHNU = '12px';
-      }
-      this.indDM = 0; this.indTI = 0; this.indDCB = 0; this.indTK = 0; this.indLH = 0;
-    }
     if (index == 'lienhe') {
-      this.colorTextLH = 'black'; this.colorBackgroundLH = 'white';
+      this.colorTextLH = 'black';
       this.indLH++; this.displayLH2 = 'block'; this.displayLH1 = 'none';
       this.marginTopLH = '2px';
       if (this.indLH > 1) {

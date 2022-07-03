@@ -22,31 +22,38 @@ import { TechNewsComponent } from './components/body/page-body/body-center/under
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
 import { HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
-import { YouNeedKnowComponent } from './components/you-need-know/you-need-know.component';
-import { UnderLeftComponent } from './components/you-need-know/under-left/under-left.component';
-import { UnderRightComponent } from './components/you-need-know/under-right/under-right.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormLoginComponent } from './components/login/form-login/form-login.component';
-import { CateListComponent } from './components/you-need-know/under-left/cate-list/cate-list.component';
-import { HotNewComponent } from './components/you-need-know/under-left/hot-new/hot-new.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './components/login/signup/signup.component';
 import { FormSignupComponent } from './components/login/signup/form-signup/form-signup.component';
+import { Single_detailComponent } from './components/single_detail/single_detail.component';
+import { Products_nam_nu_treemComponent } from './components/products_nam_nu_treem/products_nam_nu_treem.component';
+import { ProductComponent } from './components/products_nam_nu_treem/product/product.component';
+import { Shopping_cartComponent } from './components/shopping_cart/shopping_cart.component';
+import { Cart1Component } from './components/shopping_cart/cart1/cart1.component';
 
 
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
-  { path: 'bancanbiet', component: YouNeedKnowComponent},
+  { path: 'imforProduct', component: Products_nam_nu_treemComponent},
   { path: 'dangnhap', component: LoginComponent},
   { path: 'dangky', component: SignupComponent},
+  { path: 'singledetail', component: Single_detailComponent},
+  { path: 'shoppingcart', component: Shopping_cartComponent},
 ];
 @NgModule({
   declarations: [
     AppComponent,
+    Shopping_cartComponent,
+    Cart1Component,
+    ProductComponent,
+    Products_nam_nu_treemComponent,
     MenuComponent,
+    Single_detailComponent,
     MenuBottomComponent,
     PageBodyComponent,
     BodyLeftComponent,
@@ -64,13 +71,8 @@ const route: Routes = [
     FooterComponent,
     TechNewsComponent,
     LastNewReadingsComponent,
-    YouNeedKnowComponent,
-    UnderLeftComponent,
-    UnderRightComponent,
     LoginComponent,
     FormLoginComponent,
-    CateListComponent,
-    HotNewComponent,
     SignupComponent,
     FormSignupComponent,
 
