@@ -16,6 +16,12 @@ public class ProjectChuyenDeWebApplication implements CommandLineRunner  {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
+		String sql = "INSERT INTO user(name, password) VALUES ("
+				+"'nguyen van a', '123456' )";
+		int rows = jdbcTemplate.update(sql);
+		if(rows>0) {
+			System.out.println("sdhsdhsdjs");
+		}
 		
 	}
 

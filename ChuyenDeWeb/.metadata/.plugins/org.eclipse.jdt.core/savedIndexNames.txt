@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+C:\ChuyenDeWeb\.metadata\.plugins\org.eclipse.jdt.core
-1813136917.index
-1865797976.index
