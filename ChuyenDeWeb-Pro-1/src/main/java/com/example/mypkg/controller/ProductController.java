@@ -2,6 +2,8 @@ package com.example.mypkg.controller;
 
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +25,7 @@ public class ProductController {
 	private ProductService productService;
 
 	@GetMapping("/get-all-by-product-type/{type}")
+	@RolesAllowed("ROLE_USER")
 	public ResponseEntity<ResponseObject> getAllProductsByProductType(@PathVariable("type") String productType) {
 		List<ProductDTO> result = productService.getAllProductsByProductType(productType);
 		return ResponseEntity.ok(new ResponseObject(String.valueOf(HttpStatus.OK), null, result));

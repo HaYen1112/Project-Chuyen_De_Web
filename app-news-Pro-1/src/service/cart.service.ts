@@ -16,7 +16,7 @@ export class CartService {
       let checkInCart = false;
       if (cart.length > 0) {
         cart.forEach(function (item: any) {
-          if (item.idProduct == productId) {
+          if (item.productId == productId) {
             item.quantity = parseInt(item.quantity) + 1;
             checkInCart = true;
           }

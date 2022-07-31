@@ -3,6 +3,7 @@ package com.example.mypkg.configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -15,6 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.example.mypkg.filter.JwtFilter;
 import com.example.mypkg.service.imp.UserDetailsServiceImp;
+import com.example.mypkg.until.Role;
 
 @SuppressWarnings("deprecation")
 @Configuration
@@ -43,9 +45,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/authenticate", "/product/get-all-by-product-type/**","/product/get-product-by-id/**").permitAll()
-				.anyRequest().authenticated().and().exceptionHandling().and().sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.csrf().disable();
+		http.cors();
+		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.exceptionHandling();
+		http.authorizeRequests().antMatchers("/authenticate", "/product/get-product-by-id/**").permitAll();
+		http.authorizeRequests().antMatchers(HttpMethod.GET, "/product/get-all-by-product-type/**")
+				.hasAnyAuthority(Role.ROLE_USER.get());
 		http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 }
