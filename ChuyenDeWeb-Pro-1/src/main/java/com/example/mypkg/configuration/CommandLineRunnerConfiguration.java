@@ -12,7 +12,7 @@ public class CommandLineRunnerConfiguration {
 	@Bean
 	CommandLineRunner commandLineRunner(UserAppService userService) {
 		return args -> {
-			userService.register(new UserAppDTO("admin@gmail.com", EncrytedPasswordUtil.encrytePassword("123")));
+			userService.register(new UserAppDTO("user@gmail.com", EncrytedPasswordUtil.encrytePassword("123")));
 		};
 	}
 }
