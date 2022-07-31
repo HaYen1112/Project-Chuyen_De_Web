@@ -46,7 +46,7 @@ import { AdminAcountComponent } from './components/admin_page/admin-acount/admin
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
-  { path: 'imforProduct', component: Products_nam_nu_treemComponent},
+  { path: 'imforProduct/:productType', component: Products_nam_nu_treemComponent},
   { path: 'dangnhap', component: LoginComponent},
   { path: 'dangky', component: SignupComponent},
   { path: 'singledetail', component: Single_detailComponent},
