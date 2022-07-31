@@ -34,16 +34,28 @@ import { Products_nam_nu_treemComponent } from './components/products_nam_nu_tre
 import { ProductComponent } from './components/products_nam_nu_treem/product/product.component';
 import { Shopping_cartComponent } from './components/shopping_cart/shopping_cart.component';
 import { Cart1Component } from './components/shopping_cart/cart1/cart1.component';
+import { AdminPageComponent } from './components/admin_page/admin-page.component';
+import { AdminProductComponent } from './components/admin_page/admin-product/admin-product.component';
+import { AdminMenuComponent } from './components/admin_page/admin-menu/admin-menu.component';
+import { AdminEditProductComponent } from './components/admin_page/admin-edit-product/admin-edit-product.component';
+import { AdminAddProductComponent } from './components/admin_page/admin-add-product/admin-add-product.component';
+import { AdminHomeComponent } from './components/admin_page/admin-home/admin-home.component';
+import { AdminAcountComponent } from './components/admin_page/admin-acount/admin-acount.component';
 
 
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
-  { path: 'imforProduct/:productType', component: Products_nam_nu_treemComponent},
+  { path: 'imforProduct', component: Products_nam_nu_treemComponent},
   { path: 'dangnhap', component: LoginComponent},
   { path: 'dangky', component: SignupComponent},
   { path: 'singledetail', component: Single_detailComponent},
   { path: 'shoppingcart', component: Shopping_cartComponent},
+  { path: 'admin', component: AdminPageComponent},
+  { path: 'admin/product', component: AdminProductComponent},
+  { path: 'admin/product/add', component: AdminAddProductComponent},
+  { path: 'admin/product/edit', component: AdminEditProductComponent},
+  { path: 'admin/account', component: AdminAcountComponent},
 ];
 @NgModule({
   declarations: [
@@ -75,6 +87,13 @@ const route: Routes = [
     FormLoginComponent,
     SignupComponent,
     FormSignupComponent,
+    AdminPageComponent,
+    AdminProductComponent,
+    AdminMenuComponent,
+    AdminEditProductComponent,
+    AdminAddProductComponent,
+    AdminHomeComponent,
+    AdminAcountComponent,
 
   ],
   imports: [
