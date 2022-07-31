@@ -1,0 +1,205 @@
+.whats-news-area .whats-news-wrapper, .about-area2 .whats-news-wrapper, .contact-section .whats-news-wrapper {
+  background: #fff;
+  padding: 30px 20px 20px 20px;
+  margin-left: -12px;
+  margin-top: 20px;
+  width: 650px;
+  height: 630px;
+}
+
+.whats-news-area .whats-news-single, .about-area2 .whats-news-single, .contact-section .whats-news-single {
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 250px;
+}
+
+.whats-news-area .whats-news-single .whates-img, .about-area2 .whats-news-single .whates-img, .contact-section .whats-news-single .whates-img {
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.whats-news-area .whats-news-single .whates-img img, .about-area2 .whats-news-single .whates-img img, .contact-section .whats-news-single .whates-img img {
+  width: 250px;
+  height: 140px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 5px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.whats-news-area .whats-news-single .whates-caption h4 a, .about-area2 .whats-news-single .whates-caption h4 a, .contact-section .whats-news-single .whates-caption h4 a {
+  width: 240px;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.whats-news-area .whats-news-single .whates-caption h4 a:hover, .about-area2 .whats-news-single .whates-caption h4 a:hover, .contact-section .whats-news-single .whates-caption h4 a:hover {
+  color: #00bfc5;
+}
+
+.whats-news-area .whats-news-single .whates-caption span, .about-area2 .whats-news-single .whates-caption span, .contact-section .whats-news-single .whates-caption span {
+  margin-left: 10px;
+  color: #707b8e;
+  font-size: 12px;
+  margin-bottom: 14px;
+  display: block;
+  margin-top: -10px;
+}
+
+.whats-news-area .whats-news-single .whates-caption p, .about-area2 .whats-news-single .whates-caption p, .contact-section .whats-news-single .whates-caption p {
+  margin-bottom: 0;
+  color: #000000;
+  font-size: 12px;
+}
+
+.whats-news-area .whats-news-single:hover .whates-img img, .about-area2 .whats-news-single:hover .whates-img img, .contact-section .whats-news-single:hover .whates-img img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.whats-news-area .whats-right-single, .about-area2 .whats-right-single, .contact-section .whats-right-single {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.whats-news-area .whats-right-single img, .about-area2 .whats-right-single img, .contact-section .whats-right-single img {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.whats-news-area .whats-right-single .whats-right-cap, .about-area2 .whats-right-single .whats-right-cap, .contact-section .whats-right-single .whats-right-cap {
+  padding-left: 18px;
+}
+
+.whats-news-area .whats-right-single .whats-right-cap span, .about-area2 .whats-right-single .whats-right-cap span, .contact-section .whats-right-single .whats-right-cap span {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.whats-news-area .whats-right-single .whats-right-cap h4, .about-area2 .whats-right-single .whats-right-cap h4, .contact-section .whats-right-single .whats-right-cap h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.whats-news-area .whats-right-single .whats-right-cap h4 a, .about-area2 .whats-right-single .whats-right-cap h4 a, .contact-section .whats-right-single .whats-right-cap h4 a {
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  color: black;
+}
+
+.whats-news-area .whats-right-single .whats-right-cap h4 a:hover, .about-area2 .whats-right-single .whats-right-cap h4 a:hover, .contact-section .whats-right-single .whats-right-cap h4 a:hover {
+  color: #00bfc5;
+}
+
+.whats-news-area .whats-right-single .whats-right-cap p, .about-area2 .whats-right-single .whats-right-cap p, .contact-section .whats-right-single .whats-right-cap p {
+  color: #707b8e;
+  font-size: 12px;
+  margin: 0;
+  line-height: 1;
+}
+
+.whats-news-area .single-follow, .about-area2 .single-follow, .contact-section .single-follow {
+  background: #fff;
+  padding: 30px 20px 30px 20px;
+}
+
+.whats-news-area .single-follow .single-box, .about-area2 .single-follow .single-box, .contact-section .single-follow .single-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.whats-news-area .single-follow .follow-us, .about-area2 .single-follow .follow-us, .contact-section .single-follow .follow-us {
+  background: #fff;
+  border: 1px solid #f4f4f4;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-bottom: 5px;
+  width: 49%;
+}
+
+.whats-news-area .single-follow .follow-us .follow-count, .about-area2 .single-follow .follow-us .follow-count, .contact-section .single-follow .follow-us .follow-count {
+  padding-left: 15px;
+}
+
+.whats-news-area .single-follow .follow-us .follow-count span, .about-area2 .single-follow .follow-us .follow-count span, .contact-section .single-follow .follow-us .follow-count span {
+  color: #232323;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.whats-news-area .single-follow .follow-us .follow-count p, .about-area2 .single-follow .follow-us .follow-count p, .contact-section .single-follow .follow-us .follow-count p {
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 11px;
+}
+
+.whats-news-area .news-poster img, .about-area2 .news-poster img, .contact-section .news-poster img {
+  width: 100%;
+  padding: 0 61px;
+}
+
+.whats-news-area .nav-tabs .nav-link, .about-area2 .nav-tabs .nav-link, .contact-section .nav-tabs .nav-link {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.whats-news-area .nav-tabs .nav-item.show .nav-link, .whats-news-area .nav-tabs .nav-link.active, .about-area2 .nav-tabs .nav-item.show .nav-link, .about-area2 .nav-tabs .nav-link.active, .contact-section .nav-tabs .nav-item.show .nav-link, .contact-section .nav-tabs .nav-link.active {
+  color: #00bfc5;
+  background: none;
+}
+
+.whats-news-area .nav-tabs .nav-item, .about-area2 .nav-tabs .nav-item, .contact-section .nav-tabs .nav-item {
+  display: block;
+  color: #051441;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.whats-news-area .nav-tabs, .about-area2 .nav-tabs, .contact-section .nav-tabs {
+  margin-bottom: 31px;
+  padding-bottom: 0px;
+  position: relative;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-left: -60px;
+  background: none;
+}
+/*# sourceMappingURL=feature.component.css.map */

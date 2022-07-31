@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAA;EAClB,UAAU,EAAC,IAAI;CAShB;;AAVD,AAEE,oBAFkB,CAElB,GAAG,CAAA;EAED,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,WAAW,EAAC,GAAG;CAEhB",
+    "sources": [
+        "tech-news.component.scss"
+    ],
+    "names": [],
+    "file": "tech-news.component.css"
+}

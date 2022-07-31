@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.menu_bottom {
+  font-size: 12px;
+  height: 40px;
+  position: fixed;
+  /*Cho menu cố định 1 vị trí với top và left*/
+  top: 75px;
+  /*Nằm trên cùng*/
+  left: 0px;
+  /*Nằm sát bên trái*/
+  z-index: 1000;
+  /*Hiển thị lớp trên cùng*/
+  background-color: #fff;
+  width: 1270px;
+  text-transform: lowercase;
+}
+
+.menu_bottom :first-letter {
+  text-transform: uppercase;
+}
+
+.menu_bottom .navbar {
+  -webkit-box-shadow: 0 1px 7px #d9d9d9;
+          box-shadow: 0 1px 7px #d9d9d9;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fcfafa;
+}
+
+.menu_bottom .navbar a {
+  float: left;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  padding: 8px 9px 8px 8px;
+  text-decoration: none;
+}
+
+.menu_bottom .navbar a:hover {
+  text-decoration: underline;
+}
+
+.menu_bottom .navbar:hover {
+  overflow: visible;
+}
+
+.menu_bottom .subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.menu_bottom .subnav .subnavbtn {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  color: #333;
+  padding: 8px 9px 8px 8px;
+  background-color: transparent;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+
+.menu_bottom .subnav .subnavbtn :first-letter {
+  text-transform: uppercase;
+}
+
+.menu_bottom .subnav:hover .subnav-content {
+  display: block;
+}
+
+.menu_bottom .navbar a:hover, .menu_bottom .subnav:hover .subnavbtn {
+  color: #00bfc5;
+}
+
+.menu_bottom .subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #018f94;
+  width: 100%;
+  z-index: 1;
+  height: 35px;
+  padding-left: 100px;
+}
+
+.menu_bottom .subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu_bottom .subnav-content a:hover {
+  text-decoration: underline;
+  color: white;
+}
+/*# sourceMappingURL=menu-bottom.component.css.map */
