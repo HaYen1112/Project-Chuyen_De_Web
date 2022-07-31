@@ -1,0 +1,149 @@
+ <!-- Whats New Start -->
+ <section class="whats-news-area pt-50 pb-20 gray-bg">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+          <div class="whats-news-wrapper">
+              <!-- Heading & Nav Button -->
+              <div class="row justify-content-between align-items-end mb-15">
+                  <div class="col-xl-4">
+                      <div class="section-tittle mb-30">
+                          <h3 style="font-weight: bold;margin-left: 10px; font-size: 35px; margin-bottom: 30px;width: 250px;">Chuyên mục</h3>
+                      </div>
+                  </div>
+                  <div class="col-xl-8 col-md-9">
+                      <div class="properties__button">
+                          <!--Nav Button  -->
+                          <nav>
+                              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Đồng hồ nam</a>
+                                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Đồng hồ nữ</a>
+                                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Đồng hồ trẻ em</a>
+                                  </div>
+                          </nav>
+                          <!--End Nav Button  -->
+                      </div>
+                  </div>
+              </div>
+              <!-- Tab content -->
+              <div class="row">
+                  <div class="col-12">
+                      <!-- Nav Card -->
+                      <div class="tab-content" id="nav-tabContent">
+                          <!-- card one -->
+                          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                              <div class="row">
+                                  <!-- Left Details Caption -->
+                                  <div class="col-xl-6 col-lg-12">
+                                      <div class="whats-news-single mb-40 mb-40" *ngFor="let i of indexs">
+                                          <div class="whates-img">
+                                              <img src={{dataLife[i]?.image}} alt="">
+                                          </div>
+                                          <div class="whates-caption">
+                                              <h4><a href="{{dataLife[i]?.link}}" target="blank">{{dataLife[i]?.title}} </a></h4>
+                                              <span>{{dataLife[i]?.time}}</span>
+                                            </div>
+                                      </div>
+
+                                  </div>
+                                  <!-- Right single caption -->
+                                  <div class="col-xl-6 col-lg-12">
+                                      <div class="row">
+                                          <!-- single -->
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataLife; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
+                                                  <div class="whats-right-img">
+                                                      <img src={{data.image}} alt="">
+                                                  </div>
+                                                  <div class="whats-right-cap">
+                                                      <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                      <p>{{data.price}}</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Card two -->
+                          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                              <div class="row">
+                                  <!-- Left Details Caption -->
+                                  <div class="col-xl-6">
+                                      <div class="whats-news-single mb-40" *ngFor="let i of indexs">
+                                          <div class="whates-img">
+                                              <img src={{dataTravel[i]?.image}} alt="">
+                                          </div>
+                                          <div class="whates-caption">
+                                              <h4><a href="{{dataTravel[i]?.link}}" target="blank">{{dataTravel[i]?.title}}</a></h4>
+                                              <span>{{dataTravel[i]?.time}}</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- Right single caption -->
+                                  <div class="col-xl-6 col-lg-12">
+                                      <div class="row">
+                                          <!-- single -->
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataTravel; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
+                                                  <div class="whats-right-img">
+                                                      <img src={{data.image}} alt="">
+                                                  </div>
+                                                  <div class="whats-right-cap">
+                                                      <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                      <p>{{data.price}}</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Card three -->
+                          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                              <div class="row">
+                                  <!-- Left Details Caption -->
+                                  <div class="col-xl-6">
+                                      <div class="whats-news-single mb-40" *ngFor="let i of indexs">
+                                          <div class="whates-img">
+                                              <img src={{dataFashion[i]?.image}} alt="">
+                                          </div>
+                                          <div class="whates-caption">
+                                              <h4><a href="{{dataFashion[i]?.link}}" target="blank">{{dataFashion[i]?.title}}</a></h4>
+                                              <span>{{dataFashion[i]?.time}}</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- Right single caption -->
+                                  <div class="col-xl-6 col-lg-12">
+                                      <div class="row">
+                                          <!-- single -->
+                                          <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" *ngFor="let data of dataFashion; let i=index">
+                                              <div class="whats-right-single mb-20" *ngIf="(i<6) && (i>1)">
+                                                  <div class="whats-right-img">
+                                                      <img src={{data.image}} alt="">
+                                                  </div>
+                                                  <div class="whats-right-cap">
+                                                      <h4><a href="{{data.link}}" target="blank">{{data.title}}</a></h4>
+                                                      <p>{{data.price}}</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+                  <!-- End Nav Card -->
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Whats New End -->

@@ -1,0 +1,187 @@
+.whats-news-area,.about-area2,.contact-section{
+  .whats-news-wrapper{
+      background: #fff;
+      padding: 30px 20px 20px 20px;
+      margin-left: -12px;
+      margin-top: 20px;
+      width: 650px;
+      height: 630px;
+  }
+
+  // left
+  .whats-news-single{
+      margin-left: 15px;
+      margin-right: 15px;
+      height: 250px;
+      .whates-img{
+          margin-bottom: 12px;
+          overflow: hidden;
+
+          img{
+             width: 250px;
+             height: 140px;
+              transform: scale(1);
+              object-fit: cover;
+              margin-left: 5px;
+              filter: brightness(80%);
+          }
+      }
+      .whates-caption{
+          h4{
+              a{
+                  width: 240px;
+                  margin-left: 10px;
+                  font-size: 14px;
+                  line-height: 1.2;
+                  margin-bottom: 12px;
+                  display: block;
+                  font-weight: 700;
+                  text-decoration: none;
+                  color: black;
+                  &:hover{
+                      color: #00bfc5;
+
+                  }
+              }
+          }
+          span{
+            margin-left: 10px;
+              color: #707b8e;
+              font-size: 12px;
+              margin-bottom: 14px;
+              display: block;
+              margin-top: -10px;
+          }
+          p{
+              margin-bottom: 0;
+              color: #000000;
+              font-size: 12px;
+          }
+
+      }
+      // Hover
+      &:hover{
+          .whates-img{
+              img{
+                  transform: scale(1.05);
+                  object-fit: cover;
+              }
+          }
+      }
+  }
+  // Right
+  .whats-right-single{
+      display: flex;
+      margin-bottom: 18px;
+      img{
+        width: 100px;
+        height: 100px;
+        filter: brightness(80%);
+        object-fit: cover;
+      }
+      .whats-right-cap{
+          padding-left: 18px;
+          span{
+              text-transform: uppercase;
+              font-size: 11px;
+              font-weight: 700;
+              line-height: 1;
+              margin-bottom: 15px;
+              display: inline-block;
+          }
+
+          h4{
+              font-size: 14px;
+              font-weight: 700;
+              a{
+                  font-weight: 500;
+                  line-height:1.4;
+                  text-decoration: none;
+                  color: black;
+                  &:hover{
+                      color: #00bfc5;
+                  }
+              }
+          }
+          p{
+              color:#707b8e;
+              font-size: 12px;
+              margin: 0;
+              line-height: 1;
+          }
+      }
+  }
+  // Rihgt contnet
+  .single-follow{
+      background: #fff;
+      padding: 30px 20px 30px 20px;
+      .single-box{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+      .follow-us{
+          background: #fff;
+          border: 1px solid#f4f4f4;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          padding-left: 13px;
+          padding-right: 13px;
+          margin-bottom: 5px;
+          width: 49%;
+
+          .follow-count{
+              padding-left: 15px;
+              span{
+                  color:#232323;
+                  font-size: 14px;
+                  font-weight: 500;
+              }
+              p{
+                  margin-bottom: 0;
+                  line-height: 1;
+                  font-size: 11px;
+              }
+          }
+      }
+  }
+
+
+  .news-poster{
+      img{
+          width: 100%;
+          padding: 0 61px;
+      }
+  }
+  // Tabs Button Style
+      .nav-tabs .nav-link {
+          border: 0;
+          border-bottom: 2px solid transparent;
+          padding: 0;
+          margin: 0 10px;
+      }
+      .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+          color: #00bfc5;
+          background: none;
+      }
+      .nav-tabs .nav-item {
+          display: block;
+          color: #051441;
+          text-transform: capitalize;
+          font-size: 15px;
+          font-weight: 500;
+      }
+      .nav-tabs {
+          margin-bottom: 31px;
+          padding-bottom: 0px;
+          position: relative;
+          border: 0;
+          display: flex;
+          justify-content: end;
+          margin-left: -60px;
+          background:none;
+  }
+}
+
+
+

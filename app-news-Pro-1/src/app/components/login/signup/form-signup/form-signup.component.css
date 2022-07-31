@@ -1,0 +1,259 @@
+body {
+  font-family: 'Lato',Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+  height: 1000px;
+  margin-top: -250px;
+  background-color: #e0e0e0;
+  background-image: url(/assets/images/bg.jpg);
+}
+
+a {
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  color: #00bfc5;
+}
+
+a:hover, a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #00bfc5;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Lato',Arial, sans-serif;
+  color: black;
+}
+
+.bg-primary {
+  background: #00bfc5 !important;
+}
+
+.ftco-section {
+  margin-top: 10px;
+  padding: 7em 0;
+}
+
+.ftco-no-pt {
+  padding-top: 0;
+}
+
+.ftco-no-pb {
+  padding-bottom: 0;
+}
+
+.heading-section {
+  font-size: 28px;
+}
+
+.wrap {
+  margin-top: 250px;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+
+.wrap .img {
+  height: 200px;
+}
+
+.login-wrap {
+  position: relative;
+}
+
+.login-wrap h3 {
+  font-weight: bold;
+}
+
+.form-group {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 30px !important;
+}
+
+.form-group a {
+  color: black;
+}
+
+.form-control {
+  height: 48px;
+  background: white;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:focus, .form-control:active {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #00bfc5;
+}
+
+.field-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form-control-placeholder {
+  position: absolute;
+  top: 2px;
+  padding: 7px 0 0 15px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  opacity: .6;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  -webkit-transform: translate3d(0, -120%, 0);
+          transform: translate3d(0, -120%, 0);
+  padding: 7px 0 0 0;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #00bfc5;
+  font-weight: 700;
+}
+
+.social-media {
+  width: 100%;
+}
+
+.social-media .icon {
+  margin-left: 10px;
+}
+
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  position: absolute;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  margin-top: -4px;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrap input:checked ~ .checkmark:after {
+  display: block;
+  content: "\f14a";
+  font-family: "FontAwesome";
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-primary {
+  color: #00bfc5;
+}
+
+.checkbox-primary input:checked ~ .checkmark:after {
+  color: #00bfc5;
+}
+
+.btn {
+  cursor: pointer;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  outline: none;
+}
+
+.btn.btn-primary {
+  background: #00bfc5 !important;
+  border: 1px solid #00bfc5 !important;
+  color: white !important;
+}
+
+.btn.btn-primary:hover {
+  border: 1px solid #00bfc5;
+  background: transparent;
+  color: #00bfc5;
+}
+
+.btn.btn-primary.btn-outline-primary {
+  border: 1px solid #00bfc5;
+  background: transparent;
+  color: #00bfc5;
+}
+
+.btn.btn-primary.btn-outline-primary:hover {
+  border: 1px solid transparent;
+  background: #00bfc5;
+  color: white;
+}
+/*# sourceMappingURL=form-signup.component.css.map */
