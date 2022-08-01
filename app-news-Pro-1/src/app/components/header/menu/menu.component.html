@@ -32,18 +32,18 @@
   <ul class="site-header__tool right btn-group">
       <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem, marginTop: marginTopTK}">
         <a (click)="setColor('timkiem')" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
-          <i class="fas fa-search" [ngStyle]="{display: displayTK1}" style="margin-bottom: 5px;"></i>
-          <div class="close-container" [ngStyle]="{display: displayTK2}">
-            <div class="leftright"></div>
-            <div class="rightleft"></div>
-          </div>
+          <i class="fas fa-search"></i>
+
           <span>TÌM KIẾM</span>
         </a>
         <div class="dropdown-menu-tk" [ngStyle]="{display: displayTK2}">
           <div class="content">
+
               <input type="text" [(ngModel)]="keyword" class="input-tk" name="keyword" placeholder="Tìm kiếm...">
               <button class="icon" (click)="view3()"><i class="fa fa-search"></i></button>
+
           </div>
+
         </div>
       </li>
     <li class = "item item--ti">
