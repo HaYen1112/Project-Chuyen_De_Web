@@ -19,7 +19,7 @@ import com.example.mypkg.service.ProductService;
 public class ProductController {
 	@Autowired
 	private ProductService productService;
-
+// hiển thị danh sách sản phẩm theo type
 	@GetMapping("/get-all-by-product-type/{type}")
 	public ResponseEntity<?> getAllProductsByProductType(@PathVariable("type") String productType) {
 		List<ProductDTO> result = productService.getAllProductsByProductType(productType);
