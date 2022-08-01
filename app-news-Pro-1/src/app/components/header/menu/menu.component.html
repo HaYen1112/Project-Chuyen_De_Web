@@ -1,82 +1,150 @@
-
 <div class="site-header__content">
   <ul class="site-header__tool left btn-group">
-    <li class = "item item--ti"
-    (click)="setColor('nam')"   >
-      <a  [ngStyle]="{color:colorNam}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/imforProduct/man']"  class="parent">
+    <li class="item item--ti" (click)="setColor('nam')">
+      <a
+        [ngStyle]="{ color: colorNam }"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/imforProduct/man']"
+        class="parent"
+      >
         <i class="far fa-user"></i>
         <span>ĐỒNG HỒ NAM</span>
       </a>
     </li>
-    <li class = "item item--ti" (click)="setColor('nu')"
+    <li class="item item--ti" (click)="setColor('nu')">
+      <a
+        [ngStyle]="{ color: colorNu }"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/imforProduct/woman']"
+        class="parent"
       >
-      <a [ngStyle]="{color:colorNu}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/imforProduct/woman']" class="parent">
         <i class="far fa-user"></i>
         <span>ĐỒNG HỒ NỮ</span>
       </a>
     </li>
-    <li class = "item item--ti" (click)="setColor('treem')"
-    >
-      <a [ngStyle]="{color:colorTE}"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/imforProduct/kid']" class="parent">
+    <li class="item item--ti" (click)="setColor('treem')">
+      <a
+        [ngStyle]="{ color: colorTE }"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/imforProduct/kid']"
+        class="parent"
+      >
         <i class="far fa-user"></i>
         <span>ĐỒNG HỒ TRẺ EM</span>
       </a>
     </li>
   </ul>
-  <h1 class = "logo" [ngStyle]="{paddingTop: paddingHome + 'px'}">
-    <a [routerLink]="['/']" class = "logo-index">
-     <b><span style="font-family: inherit; font-size: 25px;" >THỜI THƯỢNG </span></b>
-      <h6 [ngStyle]="{display: displayHome}" style="font-size: 14px;">WATCHSTORE</h6>
+  <h1 class="logo" [ngStyle]="{ paddingTop: paddingHome + 'px' }">
+    <a [routerLink]="['/']" class="logo-index">
+      <b
+        ><span style="font-family: inherit; font-size: 25px"
+          >THỜI THƯỢNG
+        </span></b
+      >
+      <h6 [ngStyle]="{ display: displayHome }" style="font-size: 14px">
+        WATCHSTORE
+      </h6>
     </a>
   </h1>
   <ul class="site-header__tool right btn-group">
-      <li class = "item item--dm dropdown" [ngStyle]="{backgroundColor: colorBackgroundTimKiem, marginTop: marginTopTK}">
-        <a (click)="setColor('timkiem')" [ngStyle]="{color:colorTextTimKiem}" href="#" class="parent dropbtn" id="navbardrop" data-toggle="dropdown">
-          <i class="fas fa-search" [ngStyle]="{display: displayTK1}" style="margin-bottom: 5px;"></i>
-          <div class="close-container" [ngStyle]="{display: displayTK2}">
-            <div class="leftright"></div>
-            <div class="rightleft"></div>
-          </div>
-          <span>TÌM KIẾM</span>
-        </a>
-        <div class="dropdown-menu-tk" [ngStyle]="{display: displayTK2}">
-          <div class="content">
-              <input type="text" [(ngModel)]="keyword" class="input-tk" name="keyword" placeholder="Tìm kiếm...">
-              <button class="icon" (click)="view3()"><i class="fa fa-search"></i></button>
-          </div>
+    <li
+      class="item item--dm dropdown"
+      [ngStyle]="{
+        backgroundColor: colorBackgroundTimKiem,
+        marginTop: marginTopTK
+      }"
+    >
+      <a
+        (click)="setColor('timkiem')"
+        [ngStyle]="{ color: colorTextTimKiem }"
+        href="#"
+        class="parent dropbtn"
+        id="navbardrop"
+        data-toggle="dropdown"
+      >
+        <i
+          class="fas fa-search"
+          [ngStyle]="{ display: displayTK1 }"
+          style="margin-bottom: 5px"
+        ></i>
+        <div class="close-container" [ngStyle]="{ display: displayTK2 }">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
         </div>
-      </li>
-    <li class = "item item--ti">
-      <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/shoppingcart']" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" >
+        <span>TÌM KIẾM</span>
+      </a>
+      <div class="dropdown-menu-tk" [ngStyle]="{ display: displayTK2 }">
+        <div class="content">
+          <input
+            type="text"
+            [(ngModel)]="keyword"
+            class="input-tk"
+            name="keyword"
+            placeholder="Tìm kiếm..."
+          />
+          <button class="icon" (click)="view3()">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </li>
+    <li class="item item--ti">
+      <a
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/shoppingcart']"
+        class="parent dropbtn"
+        id="navbardrop"
+        data-toggle="dropdown"
+      >
         <i class="far fa-bell"></i>
         <span>GIỎ HÀNG</span>
-          <!-- <img _ngcontent-nyt-c18="" width="25px" height="25px" src="assets/images/icon.gif" data-was-processed="true" class="loading" style="margin-top: -5px;"> -->
+        <!-- <img _ngcontent-nyt-c18="" width="25px" height="25px" src="assets/images/icon.gif" data-was-processed="true" class="loading" style="margin-top: -5px;"> -->
       </a>
+    </li>
 
-    <li class = "item item--lh dropdown" [ngStyle]="{color: colorLH}">
-      <a   routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/myOder']" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" >
+    <li
+      *ngIf="loginService.isLogged()"
+      class="item item--lh dropdown"
+      [ngStyle]="{ color: colorLH }"
+    >
+      <a
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/myOder']"
+        class="parent dropbtn"
+        id="navbardrop"
+        data-toggle="dropdown"
+      >
         <i class="far fa-envelope"></i>
-          <span>HÀNG ĐÃ ĐẶT</span>
+        <span>HÀNG ĐÃ ĐẶT</span>
       </a>
-      <div >
+      <div></div>
+    </li>
 
-
-
-
-
-        </div>
-
-    <li class = "item item--dn">
-      <a *ngIf="!loginService.isLogged()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangnhap']" class="parent">
+    <li class="item item--dn">
+      <a
+        *ngIf="!loginService.isLogged()"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/dangnhap']"
+        class="parent"
+      >
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
-      <a (click)="onClickLogout()" *ngIf="loginService.isLogged()" style="cursor: pointer;" class="parent">
+      <a
+        (click)="onClickLogout()"
+        *ngIf="loginService.isLogged()"
+        style="cursor: pointer"
+        class="parent"
+      >
         <i class="far fa-user"></i>
         <span>ĐĂNG XUẤT</span>
       </a>
     </li>
   </ul>
 </div>
-
-

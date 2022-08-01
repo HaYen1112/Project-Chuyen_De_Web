@@ -2,6 +2,7 @@ package com.example.mypkg.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,7 +30,7 @@ public class ProductBill {
 	private Long productId;
 	@Column(name = "bill_id")
 	private Long billId;
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "product_id", insertable = false, nullable = false, updatable = false)
 	private Product product;
 	@ManyToOne()
