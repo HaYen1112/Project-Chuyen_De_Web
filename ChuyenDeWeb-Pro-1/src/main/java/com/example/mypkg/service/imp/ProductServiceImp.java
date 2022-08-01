@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.example.mypkg.dto.ProductDTO;
@@ -41,11 +40,10 @@ public class ProductServiceImp implements ProductService {
 		return null;
 	}
 
-	
+	@Override
+	public List<ProductDTO> getAllProductsByName(String name) {
+		return productRepository.searchProductName(name,false).stream()
+				.map(product -> modelMapper.map(product, ProductDTO.class)).collect(Collectors.toList());
+	}
 
-
-	
-	
-
-	
 }

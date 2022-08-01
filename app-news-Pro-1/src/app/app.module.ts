@@ -44,6 +44,7 @@ import { AdminAcountComponent } from './components/admin_page/admin-acount/admin
 import { MyOderComponent } from './components/shopping_cart/my_oder/my-oder/my-oder.component';
 
 const route: Routes = [
+  { path: 'search/:name', component: LastNewReadingsComponent },
   { path: 'search', component: LastNewReadingsComponent },
   { path: 'myOder', component: MyOderComponent },
   { path: '', component: PageBodyComponent },
