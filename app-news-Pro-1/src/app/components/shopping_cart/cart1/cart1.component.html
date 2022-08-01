@@ -2,85 +2,101 @@
 <html lang="en">
   <body class="">
     <div style="margin-top: 0px" class="container">
-      <div class="colorlib-product">
-        <div class="container1">
-          <div class="row1 row-pb-lg">
-            <div
-              class="col-md-10 offset-md-1"
-              style="margin: auto; margin-bottom: 0px"
+      <div class="container1">
+        <h2 *ngIf="products.length == 0" style="text-align: center;">Giỏ hàng rỗng</h2>
+        <h5 *ngIf="products.length > 0">Sản phẩm</h5>
+        <table class="table">
+          <tbody>
+            <tr
+              class="row-tb"
+              *ngFor="let item of products"
+              id="item-{{ item.id }}"
             >
-              <div class="process-wrap">
-                <div class="process text-center">
-                  <p style="background: #41bedd; color: black">
-                    <span>01</span>
-                  </p>
-                  <h3>GIỎ HÀNG</h3>
-                </div>
-                <div class="process text-center">
-                  <p><span>02</span></p>
-                  <h3>THỦ TỤC THANH TOÁN</h3>
-                </div>
-                <div class="process text-center">
-                  <p><span>03</span></p>
-                  <h3>XÁC NHẬN ĐƠN HÀNG</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <table class="table">
-            <tbody>
-              <tr class="row-tb" *ngFor="let item of products" id="item-{{item.id}}" >
-                <td>
-                  <img class="img-pro" [src]="item.img"  />
-                </td>
-                <td class="title-pro">{{item.productName}}</td>
-                <td>
-                  <div class="row cell-amount" >
-                     <div class="btn-amount"  (click)="onClickMinus(item.id)">-</div>
-                     <input #quantity class="col-4 mx-2 ip-amount" (change)="onChangeQuantity(item.id, quantity.value)" type="number" [value]="item.quantity">
-                     <div class="btn-amount" (click)="onClickPlus(item.id)">+</div>
+              <td>
+                <img class="img-pro" [src]="item.img" />
+              </td>
+              <td class="title-pro">{{ item.productName }}</td>
+              <td>
+                <div class="row cell-amount">
+                  <div class="btn-amount" (click)="onClickMinus(item.id)">
+                    -
                   </div>
-                </td>
-                <td>{{item.price}} VNĐ</td>
-                <td><button class="btn btn-outline-secondary" (click)="onClickDeleteProduct(item.id)">X</button></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="row1 row-pb-lg">
-            <div class="col-md-12">
-              <div class="total-wrap">
-                <div class="row1">
-                  <div class="col-sm-8">
-                    <form action="#">
-                      <div class="row1 form-group1"></div>
-                    </form>
-                  </div>
-                  <div class="col-sm-4 text-center">
-                    <div class="total">
-                      <div class="sub">
-                        <p><span>Subtotal:</span> <span>{{totalPrice()}} VNĐ</span></p>
-                        <p><span>Delivery:</span> <span>$0.00</span></p>
-                        <p><span>Discount:</span> <span>$45.00</span></p>
+                  <input
+                    #quantity
+                    class="col-4 mx-2 ip-amount"
+                    (change)="onChangeQuantity(item.id, quantity.value)"
+                    type="number"
+                    [value]="item.quantity"
+                  />
+                  <div class="btn-amount" (click)="onClickPlus(item.id)">+</div>
+                </div>
+              </td>
+              <td>{{ item.price }} VNĐ</td>
+              <td>
+                <button
+                  class="btn btn-outline-secondary"
+                  (click)="onClickDeleteProduct(item.id)"
+                >
+                  X
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row1 row-pb-lg">
+          <div class="col-md-12">
+            <div class="total-wrap">
+              <div class="row1">
+                <div class="col-sm-7">
+                  <form action="#">
+                    <div class="row1 form-group1"></div>
+                  </form>
+                </div>
+                <div *ngIf="products.length > 0" class="col-sm-5 text-center">
+                  <div class="total">
+                    <div class="sub">
+                      <p>
+                        <span>Chi phí:</span
+                        ><span> {{ totalPrice() }} VNĐ</span>
+                      </p>
+                      <p>
+                        <span>Phí vận chuyển:</span
+                        ><span> {{ deliveryCost.cost }} VNĐ</span>
+                      </p>
+                      <p>
+                        <span>Hình thức thanh toán:</span
+                        ><span>  Thanh toán khi nhận hàng</span>
+                      </p>
+                      <div class="form-group">
+                        <label for="address">Địa chỉ nhận hàng:</label>
+                        <textarea
+                          [(ngModel)]="address"
+                          class="form-control"
+                          id="ip-address"
+                          rows="3"
+                        ></textarea>
                       </div>
-                      <div class="grand-total">
-                        <p>
-                          <span><strong>Total:</strong></span>
-                          <span>$450.00</span>
-                        </p>
-                      </div>
-                      <div class="col-sm-3" style="margin-top: 20px">
-                        <a href="checkout.html"
-                          ><input
-                            type="submit"
-                            value="Thanh Toán"
-                            class="btn btn-primary"
-                            style="
-                              width: 300px;
-                              border: none;
-                              background: #41bedd;
-                            "
-                        /></a>
-                      </div>
+                      <p
+                        id="notify-address"
+                        style="color: red; display: none; margin-top: 0px"
+                      >
+                        Vui lòng nhập địa chỉ nhận hàng!
+                      </p>
+                    </div>
+                    <div class="grand-total">
+                      <p>
+                        <span><strong style="font-size: 20px;">Tổng thanh toán:</strong></span>
+                        <span>{{ totalPrice() + deliveryCost.cost }} VNĐ</span>
+                      </p>
+                    </div>
+                    <div class="col-sm-3" style="margin-top: 20px">
+                      <input
+                        (click)="onClickPayment()"
+                        type="button"
+                        value="Thanh Toán"
+                        class="btn btn-primary"
+                        style="width: 370px; border: none; background: #41bedd"
+                      />
                     </div>
                   </div>
                 </div>
@@ -90,5 +106,51 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="notify-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="notify-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Thông báo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Vui lòng đăng nhập để thanh toán</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-dismiss="modal"
+            >
+              Đóng
+            </button>
+            <a href="/dangnhap/gio-hang"
+              ><button type="button" class="btn btn-primary">
+                Đăng nhập
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      id="open-modal-notify"
+      [hidden]="true"
+      data-toggle="modal"
+      data-target="#notify-modal"
+    ></button>
   </body>
 </html>

@@ -223,10 +223,8 @@
 }
 
 .total-wrap .form-control {
-  height: 40px;
   border: 1px solid #f0f0f0 !important;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 @media (max-width: 767.98px) {
@@ -262,8 +260,9 @@
 }
 
 .total-wrap .total .grand-total p span:last-child {
-  color: #616161;
-  font-weight: 500;
+  color: #b93a3a;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .product-entry {
@@ -357,7 +356,7 @@
 }
 
 .text-center {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .col-md-10 .col-sm-8 .col-md-12 {

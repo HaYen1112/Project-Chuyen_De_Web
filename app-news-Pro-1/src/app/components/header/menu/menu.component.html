@@ -85,9 +85,13 @@
       </div>
     </li>
     <li class = "item item--dn">
-      <a  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangnhap']" class="parent">
+      <a *ngIf="!loginService.isLogged()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangnhap']" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
+      </a>
+      <a *ngIf="loginService.isLogged()" style="cursor: pointer;" class="parent">
+        <i class="far fa-user"></i>
+        <span>ĐĂNG XUẤT</span>
       </a>
     </li>
   </ul>
