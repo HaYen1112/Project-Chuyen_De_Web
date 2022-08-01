@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DeliveryCost } from 'src/model/delivery_cost';
 import { Product } from 'src/model/product';
+import { BillService } from 'src/service/bill.service';
 import { CartService } from 'src/service/cart.service';
 import { DeliveryCostService } from 'src/service/delivery-cost.service';
 import { LoginService } from 'src/service/login.service';
@@ -21,6 +22,7 @@ export class Cart1Component implements OnInit, OnDestroy {
   constructor(
     private productService: ProductService,
     private cartService: CartService,
+    private billService:BillService,
     private deliveryCostService: DeliveryCostService,
     private loginService: LoginService
   ) {}
@@ -149,7 +151,7 @@ export class Cart1Component implements OnInit, OnDestroy {
     } else {
       localStorage.setItem('address', this.address);
       document.getElementById('notify-address')!.style.display = 'none';
-      this.cartService
+      this.billService
         .paymentBill(this.products, this.address, this.deliveryCost)
         .subscribe((response) => {
           if (response.data) {

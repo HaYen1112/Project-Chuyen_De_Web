@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<!DOCTYPE html>
+<html lang="en">
+  <body class="">
+    <div style="margin-top: 0px" class="container">
+      <div style="height: 120px; width: 100%"></div>
+      <h2 *ngIf="bills.length == 0" style="text-align: center;">Bạn chưa có đơn hàng!</h2>
+      <div class="container1" *ngFor="let bill of bills; let i = index">
+        <h5>Đơn hàng {{ i + 1 }}</h5>
+        <table class="table table-bordered mt-3">
+          <thead>
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">Ảnh sản phẩm</th>
+              <th scope="col">Tên sản phẩm</th>
+              <th scope="col">Số lượng</th>
+              <th scope="col">Giá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of bill.productBillsDTO; let j = index">
+              <th scope="row">{{ j + 1 }}</th>
+              <td><img class="img-pro" [src]="item.image" /></td>
+              <td>{{ item.productName }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.price * item.quantity }} VNĐ</td>
+            </tr>
+            <tr>
+              <td colspan="1"></td>
+              <td style="font-weight: bold; font-size: 16px">Trạng thái</td>
+              <td style="font-weight: bold; color: #68838b; font-size: 16px">
+                {{ bill.billStatus }}
+              </td>
+              <td style="font-weight: bold; font-size: 16px">Phí vận chuyển</td>
+              <td style="font-weight: bold; color: #68838b; font-size: 16px">
+                {{ bill.deliveryCost }}
+                VNĐ
+              </td>
+            </tr>
+            <tr>
+              <td colspan="1"></td>
+              <td style="font-weight: bold; font-size: 16px">Ngày đặt</td>
+              <td style="font-weight: bold; color: #68838b; font-size: 16px">
+                {{ bill.date }}
+              </td>
+              <td style="font-weight: bold; font-size: 20px">TỔNG TIỀN</td>
+              <td style="font-weight: bold; color: #b93a3a; font-size: 20px">
+                {{ totalPriceBill(bill.productBillsDTO, bill.deliveryCost) }}
+                VNĐ
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

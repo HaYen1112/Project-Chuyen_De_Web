@@ -30,4 +30,10 @@ export class ProductService {
       environment.REST_API + '/product/get-product-by-id/' + productId
     );
   }
+
+  public getProductByName(name: string) : Observable<any> {
+    return this.httpClient.get(
+      environment.REST_API + '/product/get-product-by-name/' + name
+    );
+  }
 }

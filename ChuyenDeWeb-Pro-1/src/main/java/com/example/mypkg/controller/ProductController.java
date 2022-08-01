@@ -20,7 +20,7 @@ import com.example.mypkg.service.ProductService;
 public class ProductController {
 	@Autowired
 	private ProductService productService;
-
+// hiển thị danh sách sản phẩm theo type
 	@GetMapping("/get-all-by-product-type/{type}")
 	public ResponseEntity<?> getAllProductsByProductType(@PathVariable("type") String productType) {
 		List<ProductDTO> result = productService.getAllProductsByProductType(productType);
@@ -36,5 +36,14 @@ public class ProductController {
 		ProductDTO result = productService.getProductById(productId);
 		return ResponseEntity.ok(result);
 	}
-	
+
+
+	@GetMapping("/get-product-by-name/{name}")
+	public ResponseEntity<?> getProductByName(@PathVariable(name = "name", required = false) String name) {
+		if(name.equals("-1")) {
+			name = "";
+		}
+		List<ProductDTO> result = productService.getAllProductsByName(name);
+		return ResponseEntity.ok(result);
+	}
 }

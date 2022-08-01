@@ -51,4 +51,9 @@ public class ProductServiceImp implements ProductService {
 		}
 		return new ArrayList<>();
 	}
+	public List<ProductDTO> getAllProductsByName(String name) {
+		return productRepository.searchProductName(name,false).stream()
+				.map(product -> modelMapper.map(product, ProductDTO.class)).collect(Collectors.toList());
+	}
+
 }

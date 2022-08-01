@@ -3,32 +3,34 @@
     <app-menu></app-menu>
     <app-menu-bottom></app-menu-bottom>
   </div>
-  <div>
-  </div>
+  <div></div>
   <div class="body">
     <div class="most-recent-area">
-      <div class="content" [ngStyle]="{display: display}">
-        <input type="text" [(ngModel)]="keyword" class="input-tk" name="keyword" placeholder="Tìm kiếm...">
-        <button class="icon" (click)="view()"><i class="fa fa-search"></i></button>
-    </div>
-      <!-- Section Tittle -->
-      <div class="small-tittle mb-20">
-          <h4 style="font-weight: bold;margin: 30px 0px 20px 40px;">{{title}}</h4>
-      </div>
-      
       <!-- Single -->
-      <div class="most-recent-single" *ngFor="let d of dataItem; let i=index">
-          <div class="most-recent-images">
-              <img src="{{d.image}}" alt="">
+      <div class="most-recent-single">
+        <div class="row1" *ngFor="let pro of products">
+          <div class="col-md-4 sp_list">
+            <div class="khunghinhsp">
+              <img [src]="pro.img" />
+            </div>
+            <div class="row">
+              <div class="des col-6">
+                <a href="">{{ pro.productName }}</a>
+                <div class="giasp">{{ [pro.price] }} VNĐ</div>
+              </div>
+              <div class="des col-6">
+                <button
+                  class="btn btn-success"
+                  type="button"
+                  (click)="onClickAddProductToCart(pro.id)"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
           </div>
-
-          <div class="most-recent-capt">
-              <h4><a href="{{d.link}}" target="blank">{{d.title}}</a></h4>
-              <p>{{d.time}}</p>
-          </div>
+        </div>
       </div>
     </div>
-
   </div>
 </div>
-

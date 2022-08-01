@@ -11,4 +11,8 @@ public interface ProductService {
 	public ProductDTO getProductById(Long productId);
 	
 	public List<ProductDTO> getAllProducts();
+
+
+	public List<ProductDTO> getAllProductsByName(String name);
+
 }

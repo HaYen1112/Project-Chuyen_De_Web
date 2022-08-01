@@ -1,8 +1,8 @@
 package com.example.mypkg.until;
 
 public enum BillStatus {
-	WAITING("Waiting for confirm!"), CONFIRMED("Confirmed, waiting for delivery!"), DELIVERING("Bill is delivering!"),
-	RECEITVED("Bill is received");
+	WAITING("Chờ xác nhận"), CONFIRMED("Đã xác nhận, đang chờ vận chuyển"), DELIVERING("Đang vận chuyển"),
+	RECEITVED("Đã nhận");
 
 	private String status;
 
