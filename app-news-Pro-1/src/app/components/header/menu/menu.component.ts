@@ -2,6 +2,7 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { NavigationExtras, Router } from '@angular/router';
+import { LoginService } from 'src/service/login.service';
 
 @Component({
   selector: 'app-menu',
@@ -37,7 +38,7 @@ export class MenuComponent implements OnInit {
   colorNam = 'white';
   colorNu = 'white';
 
-  constructor(private menu: AppComponent, private router: Router) {
+  constructor(private menu: AppComponent, private router: Router, public loginService: LoginService) {
     this.dataTM = [];
     this.setDataTM(this.urlNew);
     this.colorTextDN = '';

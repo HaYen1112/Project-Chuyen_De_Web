@@ -42,7 +42,7 @@ export class ProductComponent implements OnInit, OnDestroy {
       this.subGetProducts = this.productSerivice
         .getAllProductByType(param['productType'])
         .subscribe((response) => {
-          this.products = response.data;
+          this.products = response;
         });
     });
   }

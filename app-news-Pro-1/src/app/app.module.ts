@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/header/menu/menu.component';
@@ -20,8 +20,8 @@ import { NewsComponent } from './components/body/page-body/body-center/news/news
 import { FooterComponent } from './components/footer/footer.component';
 import { TechNewsComponent } from './components/body/page-body/body-center/under-the-ad/under-the-ad-left/tech-news/tech-news.component';
 import { LastNewReadingsComponent } from './components/last-new-readings/last-new-readings.component';
-import { HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
-import { RouterModule, Routes} from '@angular/router';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { FormLoginComponent } from './components/login/form-login/form-login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -42,20 +42,26 @@ import { AdminAddProductComponent } from './components/admin_page/admin-add-prod
 import { AdminHomeComponent } from './components/admin_page/admin-home/admin-home.component';
 import { AdminAcountComponent } from './components/admin_page/admin-acount/admin-acount.component';
 
-
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
-  { path: '', component: PageBodyComponent},
-  { path: 'imforProduct/:productType', component: Products_nam_nu_treemComponent},
-  { path: 'dangnhap', component: LoginComponent},
-  { path: 'dangky', component: SignupComponent},
-  { path: 'singledetail', component: Single_detailComponent},
-  { path: 'shoppingcart', component: Shopping_cartComponent},
-  { path: 'admin', component: AdminPageComponent},
-  { path: 'admin/product', component: AdminProductComponent},
-  { path: 'admin/product/add', component: AdminAddProductComponent},
-  { path: 'admin/product/edit', component: AdminEditProductComponent},
-  { path: 'admin/account', component: AdminAcountComponent},
+  { path: '', component: PageBodyComponent },
+  {
+    path: 'imforProduct/:productType',
+    component: Products_nam_nu_treemComponent,
+  },
+  {
+    path: 'dangnhap',
+    component: LoginComponent,
+    children: [{ path: 'gio-hang', component: LoginComponent }],
+  },
+  { path: 'dangky', component: SignupComponent },
+  { path: 'singledetail', component: Single_detailComponent },
+  { path: 'shoppingcart', component: Shopping_cartComponent },
+  { path: 'admin', component: AdminPageComponent },
+  { path: 'admin/product', component: AdminProductComponent },
+  { path: 'admin/product/add', component: AdminAddProductComponent },
+  { path: 'admin/product/edit', component: AdminEditProductComponent },
+  { path: 'admin/account', component: AdminAcountComponent },
 ];
 @NgModule({
   declarations: [
@@ -94,19 +100,20 @@ const route: Routes = [
     AdminAddProductComponent,
     AdminHomeComponent,
     AdminAcountComponent,
-
   ],
   imports: [
-    BrowserModule, HttpClientModule, RouterModule,
-     RouterModule.forRoot(route), HttpClientJsonpModule, NgbModule, BrowserAnimationsModule, FormsModule
-
+    BrowserModule,
+    HttpClientModule,
+    RouterModule,
+    RouterModule.forRoot(route),
+    HttpClientJsonpModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    FormsModule,
   ],
-  providers: [
-    RouterModule
-  ],
+  providers: [RouterModule],
   bootstrap: [AppComponent],
   exports: [HttpClientModule, RouterModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
-
+export class AppModule {}
