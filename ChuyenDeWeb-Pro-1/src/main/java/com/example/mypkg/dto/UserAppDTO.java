@@ -11,6 +11,9 @@ import lombok.Setter;
 public class UserAppDTO {
 	private String email;
 	private String password;
+	private Long phoneNumber;
+	private String fullName;
+
 	public UserAppDTO(String email, String password) {
 		super();
 		this.email = email;
@@ -28,5 +31,5 @@ public class UserAppDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 }

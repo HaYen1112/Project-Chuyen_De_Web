@@ -16,7 +16,6 @@ export class FormLoginComponent implements OnDestroy {
   constructor(
     private router: Router,
     private loginService: LoginService,
-    private activatedRoute: ActivatedRoute
   ) {
     this.isLogged();
   }

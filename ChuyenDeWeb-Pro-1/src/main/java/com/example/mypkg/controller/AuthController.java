@@ -16,6 +16,7 @@ import com.example.mypkg.dto.AuthDTO;
 import com.example.mypkg.dto.ResponseObject;
 import com.example.mypkg.dto.UserAppDTO;
 import com.example.mypkg.service.UserAppRoleService;
+import com.example.mypkg.service.UserAppService;
 import com.example.mypkg.until.JwtUtil;
 import com.example.mypkg.until.Message;
 
@@ -28,9 +29,11 @@ public class AuthController {
 	private AuthenticationManager authenticationManager;
 	@Autowired
 	private UserAppRoleService userAppRoleService;
+	@Autowired
+	private UserAppService userAppService;
 
 	@PostMapping("/authenticate")
-	public ResponseEntity<?> generatoken(@RequestBody UserAppDTO userAppDTO) throws Exception {
+	public ResponseEntity<ResponseObject> generatoken(@RequestBody UserAppDTO userAppDTO) throws Exception {
 		try {
 			authenticationManager.authenticate(
 					new UsernamePasswordAuthenticationToken(userAppDTO.getEmail(), userAppDTO.getPassword()));
@@ -41,5 +44,16 @@ public class AuthController {
 		List<String> myRoles = userAppRoleService.getRoleNames(userAppDTO.getEmail());
 		AuthDTO authDTO = new AuthDTO(jwtUtil.generateToken(userAppDTO.getEmail()), myRoles);
 		return ResponseEntity.ok().body(new ResponseObject(String.valueOf(HttpStatus.OK), "", authDTO));
+	}
+
+	@PostMapping("/register")
+	public ResponseEntity<ResponseObject> register(@RequestBody UserAppDTO userAppDTO) throws Exception {
+		boolean isRegister = userAppService.register(userAppDTO);
+		if (isRegister) {
+			return ResponseEntity.ok()
+					.body(new ResponseObject(String.valueOf(HttpStatus.OK), Message.MS_REGISTER_SUCCEED.get(), true));
+		}
+		return ResponseEntity.ok().body(new ResponseObject(String.valueOf(HttpStatus.EXPECTATION_FAILED),
+				Message.MS_REGISTER_FAILED.get(), false));
 	}
 }
