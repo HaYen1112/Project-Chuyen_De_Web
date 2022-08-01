@@ -31,4 +31,13 @@ public class ProductController {
 		ProductDTO result = productService.getProductById(productId);
 		return ResponseEntity.ok(result);
 	}
+
+	@GetMapping("/get-product-by-name/{name}")
+	public ResponseEntity<?> getProductByName(@PathVariable(name = "name", required = false) String name) {
+		if(name.equals("-1")) {
+			name = "";
+		}
+		List<ProductDTO> result = productService.getAllProductsByName(name);
+		return ResponseEntity.ok(result);
+	}
 }
