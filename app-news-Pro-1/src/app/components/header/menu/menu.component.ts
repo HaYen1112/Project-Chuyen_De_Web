@@ -65,13 +65,7 @@ export class MenuComponent implements OnInit {
       // console.log(index);
     });
   }
-  view3(): void {
-    this.router.navigate(['/']).then(() => {
-      const index: any[] = [this.keyword];
-      this.navigationExtras = { state: index };
-      this.router.navigateByUrl('/search', this.navigationExtras);
-    });
-  }
+  
   getDisplay(title: string) {
     if (
       title == 'EURO 2020' ||
@@ -234,5 +228,9 @@ export class MenuComponent implements OnInit {
     localStorage.setItem('roles', '');
     localStorage.setItem('token', '');
     this.router.navigate(['/']);
+  }
+
+  view3(): void {
+    this.router.navigate(['/search/' + this.keyword])
   }
 }

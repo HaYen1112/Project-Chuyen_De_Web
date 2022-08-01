@@ -3,30 +3,26 @@
     <app-menu></app-menu>
     <app-menu-bottom></app-menu-bottom>
   </div>
-  <div>
-  </div>
+  <div></div>
   <div class="body">
     <div class="most-recent-area">
-
-           <!-- Single -->
-      <div class="most-recent-single" >
-        <div class="row1">
+      <!-- Single -->
+      <div class="most-recent-single">
+        <div class="row1" *ngFor="let pro of products">
           <div class="col-md-4 sp_list">
             <div class="khunghinhsp">
-              <a href="details.html">
-                <img src = "./assets/images/sp1.png"
-              /></a>
+              <img [src]="pro.img" />
             </div>
             <div class="row">
               <div class="des col-6">
-                <a href="details.html">Đồng hồ nam</a>
-                <div class="giasp">2000000</div>
+                <a href="">{{ pro.productName }}</a>
+                <div class="giasp">{{ [pro.price] }} VNĐ</div>
               </div>
               <div class="des col-6">
                 <button
                   class="btn btn-success"
                   type="button"
-
+                  (click)="onClickAddProductToCart(pro.id)"
                 >
                   Add
                 </button>
@@ -34,56 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="row1">
-          <div class="col-md-4 sp_list">
-            <div class="khunghinhsp">
-              <a href="details.html">
-                <img src = "./assets/images/sp1.png"
-              /></a>
-            </div>
-            <div class="row">
-              <div class="des col-6">
-                <a href="details.html">Đồng hồ nam</a>
-                <div class="giasp">2000000</div>
-              </div>
-              <div class="des col-6">
-                <button
-                  class="btn btn-success"
-                  type="button"
-
-                >
-                  Add
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row1">
-          <div class="col-md-4 sp_list">
-            <div class="khunghinhsp">
-              <a href="details.html">
-                <img src = "./assets/images/sp1.png"
-              /></a>
-            </div>
-            <div class="row">
-              <div class="des col-6">
-                <a href="details.html">Đồng hồ nam</a>
-                <div class="giasp">2000000</div>
-              </div>
-              <div class="des col-6">
-                <button
-                  class="btn btn-success"
-                  type="button"
-
-                >
-                  Add
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
-
   </div>
 </div>
-
