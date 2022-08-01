@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,7 +16,6 @@ import com.example.mypkg.until.BillStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -33,17 +33,23 @@ public class Bill {
 	private Date dateCreate;
 	@Column(name = "delivery_cost_id")
 	private Long deliveryCostId;
-	@ManyToOne()
+	@Column(name = "user_id")
+	private Long userId;
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "delivery_cost_id", insertable = false, nullable = false, updatable = false)
 	private DeliveryCost deliveryCost;
+	@ManyToOne()
+	@JoinColumn(name = "user_id", insertable = false, nullable = false, updatable = false)
+	private UserApp userApp;
 
-	public Bill(String address, BillStatus billStatus, boolean isDelete, Date dateCreate, Long deliveryCostId) {
+	public Bill(String address, BillStatus billStatus, boolean isDelete, Date dateCreate, Long deliveryCostId,Long userId) {
 		super();
 		this.address = address;
 		this.billStatus = billStatus;
 		this.isDelete = isDelete;
 		this.dateCreate = dateCreate;
 		this.deliveryCostId = deliveryCostId;
+		this.userId = userId;
 	}
 
 	public Long getId() {
