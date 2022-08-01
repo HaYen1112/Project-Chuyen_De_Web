@@ -43,7 +43,12 @@ export class FormLoginComponent implements OnDestroy {
           if (lastParam === 'gio-hang') {
             this.router.navigate(['/shoppingcart']);
           } else {
-            this.router.navigate(['/']);
+            if(response.data.roles=='ROLE_ADMIN'){
+              this.router.navigate(['/admin']);
+            }else{
+              this.router.navigate(['/']);
+            }
+
           }
         } else {
           alert(response.message);

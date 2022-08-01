@@ -228,6 +228,7 @@ export class MenuComponent implements OnInit {
   indLH = 0;
   indDN = 0;
 
+
   ngOnInit(): void {}
 
   onClickLogout() {

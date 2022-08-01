@@ -8,7 +8,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.mypkg.dto.DeliveryCostDTO;
 import com.example.mypkg.dto.ProductDTO;
+import com.example.mypkg.entity.DeliveryCost;
 import com.example.mypkg.entity.Product;
 import com.example.mypkg.repository.ProductRepository;
 import com.example.mypkg.service.ProductService;
@@ -34,9 +36,19 @@ public class ProductServiceImp implements ProductService {
 	@Override
 	public ProductDTO getProductById(Long productId) {
 		Product product = productRepository.findByIdAndIsDelete(productId, false).get();
+		productRepository.delete(product);
 		if (product != null) {
 			return modelMapper.map(product, ProductDTO.class);
 		}
 		return null;
+	}
+
+	@Override
+	public List<ProductDTO> getAllProducts() {
+		if(productRepository.findAll().size()>0) {
+			return productRepository.findAll().stream()
+					.map(product -> modelMapper.map(product, ProductDTO.class)).collect(Collectors.toList());
+		}
+		return new ArrayList<>();
 	}
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.mypkg.dto.DeliveryCostDTO;
 import com.example.mypkg.dto.ProductDTO;
 import com.example.mypkg.service.ProductService;
 
@@ -25,10 +26,15 @@ public class ProductController {
 		List<ProductDTO> result = productService.getAllProductsByProductType(productType);
 		return ResponseEntity.ok(result);
 	}
-
+	@GetMapping("/get-all-product")
+	public ResponseEntity<?> getAllProducts() {
+		List<ProductDTO> result = productService.getAllProducts();
+		return ResponseEntity.ok(result);
+	}
 	@GetMapping("/get-product-by-id/{productId}")
 	public ResponseEntity<?> getProductById(@PathVariable("productId") Long productId) {
 		ProductDTO result = productService.getProductById(productId);
 		return ResponseEntity.ok(result);
 	}
+	
 }

@@ -1,10 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Injectable, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/model/product';
 import { CartService } from 'src/service/cart.service';
 import { ProductService } from 'src/service/product.service';
-
+@Injectable({ providedIn: 'root' })
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',

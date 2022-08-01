@@ -57,14 +57,14 @@
             <div class="row">
               <div *ngFor="let product of products" class="col-md-4 sp_list">
                 <div class="khunghinhsp">
-                  <a href="details.html">
+                  <a [routerLink]="['/singledetail']">
                     <img [src]="product.img"
                   /></a>
                 </div>
                 <div class="row">
                   <div class="des col-6">
                     <div class="msp">{{product.code}}</div>
-                    <a href="details.html">{{product.productName}}</a>
+                    <a [routerLink]="['/singledetail']">{{product.productName}}</a>
                     <div class="giasp">{{product.price}}</div>
                   </div>
                   <div class="des col-6">
