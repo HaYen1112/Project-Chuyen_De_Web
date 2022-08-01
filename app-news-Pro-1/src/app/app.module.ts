@@ -41,9 +41,11 @@ import { AdminEditProductComponent } from './components/admin_page/admin-edit-pr
 import { AdminAddProductComponent } from './components/admin_page/admin-add-product/admin-add-product.component';
 import { AdminHomeComponent } from './components/admin_page/admin-home/admin-home.component';
 import { AdminAcountComponent } from './components/admin_page/admin-acount/admin-acount.component';
+import { MyOderComponent } from './components/shopping_cart/my_oder/my-oder/my-oder.component';
 
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
+  { path: 'myOder', component: MyOderComponent },
   { path: '', component: PageBodyComponent },
   {
     path: 'imforProduct/:productType',
@@ -100,6 +102,7 @@ const route: Routes = [
     AdminAddProductComponent,
     AdminHomeComponent,
     AdminAcountComponent,
+    MyOderComponent,
   ],
   imports: [
     BrowserModule,

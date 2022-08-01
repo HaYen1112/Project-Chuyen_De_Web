@@ -54,36 +54,18 @@
       </a>
 
     <li class = "item item--lh dropdown" [ngStyle]="{color: colorLH}">
-      <a href="#lienhe" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" (click)="setColor('lienhe')" [ngStyle]="{color: colorTextLH}">
+      <a   routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/myOder']" class="parent dropbtn" id="navbardrop" data-toggle="dropdown" >
         <i class="far fa-envelope"></i>
-
-        <span>LIÊN HỆ</span>
+          <span>HÀNG ĐÃ ĐẶT</span>
       </a>
-      <div class="dropdown-menu-lh" [ngStyle]="{display: displayLH2}">
-        <div class="content content-lh">
-          <li class = "item-lh item--datbao">
-            <a href="#datbao" class="parent">
-              <i class="fas fa-book-open"></i>
-              <span>  ĐẶT BÁO </span>
-            </a>
-          </li>
-          <li class = "item-lh item--quangcao">
-            <a href="#quangcao" class="parent">
-              <i class="fab fa-adversal"></i>
-              <span> QUẢNG CÁO </span>
-            </a>
-          </li>
-          <li class = "item-lh item--call">
-            <a href="#call" class="parent">
-              <i class="fas fa-phone-volume"></i>
-              <span> 08008052220 </span>
-            </a>
-          </li>
+      <div >
+
+
+
 
 
         </div>
-      </div>
-    </li>
+
     <li class = "item item--dn">
       <a *ngIf="!loginService.isLogged()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangnhap']" class="parent">
         <i class="far fa-user"></i>
