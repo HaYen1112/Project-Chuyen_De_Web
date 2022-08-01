@@ -6,7 +6,6 @@ body {
   height: 1000px;
   margin-top: -250px;
   background-color: #e0e0e0;
-  background-image: url(/assets/images/bg.jpg);
 }
 
 a {
@@ -37,7 +36,7 @@ h1, h2, h3, h4, h5,
 }
 
 .bg-primary {
-  background: #00bfc5 !important;
+  background: #68838B !important;
 }
 
 .ftco-section {

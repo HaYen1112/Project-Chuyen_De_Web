@@ -1,12 +1,12 @@
 .container {
   width: 198%;
-  height: 90px;
+  height: 200px;
   padding: 0px;
   margin-left: 10px;
 }
 
-.container iframe {
-  width: 100%;
+.container img {
+  width: 985px;
   height: 100%;
 }
 /*# sourceMappingURL=advertisement.component.css.map */
