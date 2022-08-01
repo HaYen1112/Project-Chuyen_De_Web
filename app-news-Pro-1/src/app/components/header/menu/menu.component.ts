@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
   marginTopDHN: string = '12px';
   marginTopDHNU: string = '12px';
   marginTopDHTE: string = '12px';
-  marginTopTK: string = '12px';
+  marginTopTK: string = '1px';
   marginTopGH: string = '12px';
   marginTopLH: string = '12px';
   colorTextDHN = '';
@@ -124,7 +124,7 @@ export class MenuComponent implements OnInit {
     this.marginTopDHN = '12px';
     this.marginTopDHNU = '12px';
     this.marginTopDHTE = '12px';
-    this.marginTopTK = '12px';
+    this.marginTopTK = '1px';
     this.marginTopGH = '12px';
     this.marginTopLH = '12px';
     if (index == 'nam' && this.router.url == '/imforProduct/man') {
@@ -148,14 +148,14 @@ export class MenuComponent implements OnInit {
       this.indTK++;
       this.displayTK2 = 'block';
       this.displayTK1 = 'none';
-      this.marginTopTK = '2px';
+      this.marginTopTK = '1px';
       if (this.indTK > 1) {
         this.colorTextTimKiem = '';
         this.colorBackgroundTimKiem = '';
         this.indTK = 0;
         this.displayTK1 = 'block';
         this.displayTK2 = 'none';
-        this.marginTopTK = '12px';
+        this.marginTopTK = '1px';
       }
       this.indDM = 0;
       this.indTI = 0;
