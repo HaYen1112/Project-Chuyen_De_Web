@@ -51,8 +51,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.exceptionHandling();
 		http.authorizeRequests().antMatchers("/authenticate", "/product/get-product-by-id/**",
 				"/product/get-all-by-product-type/**", "/delivery-cost/get-delivery-cost/**").permitAll();
-		http.authorizeRequests().antMatchers(HttpMethod.POST, "/bill/payment/**").hasAnyAuthority(Role.ROLE_USER.get(),
-				Role.ROLE_ADMIN.get());
+		http.authorizeRequests().antMatchers(HttpMethod.POST, "/bill/payment/**")
+				.hasAnyAuthority(Role.ROLE_USER.get(), Role.ROLE_ADMIN.get());
+		http.authorizeRequests().antMatchers(HttpMethod.GET, "/bill/get-all-bills/**")
+				.hasAnyAuthority(Role.ROLE_USER.get(), Role.ROLE_ADMIN.get());
 		http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 }

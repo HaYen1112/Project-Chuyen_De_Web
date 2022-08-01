@@ -11,6 +11,6 @@ import com.example.mypkg.entity.UserAppRole;
 
 @Repository
 public interface UserAppRoleRepository extends JpaRepository<UserAppRole, Long> {
-	@Query("SELECT u.role.roleName FROM UserAppRole u where u.userApp.id = :userAppId")
+	@Query("SELECT u.roleName FROM UserAppRole u where u.userId = :userAppId")
 	List<String> getRoleNames(@Param("userAppId") Long userAppId);
 }

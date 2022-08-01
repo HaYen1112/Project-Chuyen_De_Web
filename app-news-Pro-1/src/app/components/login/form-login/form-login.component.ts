@@ -1,5 +1,5 @@
-import { Component, OnInit, Injectable, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Injectable, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { User } from 'src/model/user';
 import { LoginService } from 'src/service/login.service';
@@ -13,10 +13,7 @@ export class FormLoginComponent implements OnDestroy {
   user: User = new User();
   subscription: Subscription = new Subscription();
   subGetParam: Subscription = new Subscription();
-  constructor(
-    private router: Router,
-    private loginService: LoginService,
-  ) {
+  constructor(private router: Router, private loginService: LoginService) {
     this.isLogged();
   }
   ngOnDestroy(): void {
@@ -35,7 +32,7 @@ export class FormLoginComponent implements OnDestroy {
       .login(this.user)
       .subscribe((response) => {
         if (response.data != null) {
-          let roles: any = [];
+          let roles: string[] = [];
           roles.push(...response.data.roles);
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('roles', JSON.stringify(roles));
@@ -43,7 +40,13 @@ export class FormLoginComponent implements OnDestroy {
           if (lastParam === 'gio-hang') {
             this.router.navigate(['/shoppingcart']);
           } else {
-            this.router.navigate(['/']);
+            roles.forEach((element) => {
+              if (element == 'ROLE_ADMIN') {
+                this.router.navigate(['/admin']);
+              } else {
+                this.router.navigate(['/']);
+              }
+            });
           }
         } else {
           alert(response.message);

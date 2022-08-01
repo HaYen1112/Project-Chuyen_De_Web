@@ -3,8 +3,14 @@ package com.example.mypkg.until;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
+
+import com.example.mypkg.entity.UserApp;
+import com.example.mypkg.repository.UserAppRepository;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -13,6 +19,9 @@ import java.util.function.Function;
 
 @Service
 public class JwtUtil {
+	@Autowired
+	private UserAppRepository userAppRepository;
+	
 	private String secret = "dasd$#&@*( !@#adas";
 
 	public String extractUsername(String token) {
@@ -51,5 +60,11 @@ public class JwtUtil {
 	public Boolean validateToken(String token, UserDetails userDetails) {
 		final String username = extractUsername(token);
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+	}
+
+	public UserApp getCurrentUser() {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String email = ((UserDetails)principal).getUsername();
+		return userAppRepository.findByEmail(email).get();
 	}
 }
