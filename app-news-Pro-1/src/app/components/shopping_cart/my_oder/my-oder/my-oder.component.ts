@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Bill } from 'src/model/bill';
+import { ProductBill } from 'src/model/product_bill';
 import { BillService } from 'src/service/bill.service';
 
 @Component({
@@ -9,6 +11,8 @@ import { BillService } from 'src/service/bill.service';
 })
 export class MyOderComponent implements OnInit, OnDestroy {
   subGetAllBills: Subscription = new Subscription();
+  bills: Bill[] = [];
+
   constructor(private billService: BillService) {}
   ngOnDestroy(): void {
     this.subGetAllBills.unsubscribe();
@@ -20,7 +24,15 @@ export class MyOderComponent implements OnInit, OnDestroy {
 
   getAllBills() {
     this.subGetAllBills = this.billService.getAllBills().subscribe((response) => {
-      console.log(response);
+      this.bills = response;
     })
+  }
+
+  totalPriceBill(productBills: ProductBill[], deliveryCost: number):number {
+    let result = 0;
+    productBills.forEach(element => {
+        result += (element.price * element.quantity);
+    });
+    return result + deliveryCost;
   }
 }
