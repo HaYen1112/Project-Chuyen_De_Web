@@ -22,4 +22,8 @@ export class LoginService {
   public login(user: User): Observable<any> {
     return this.httpClient.post(environment.REST_API + '/authenticate', user);
   }
+
+  public register(user: User): Observable<any> {
+    return this.httpClient.post(environment.REST_API + '/register', user);
+  }
 }

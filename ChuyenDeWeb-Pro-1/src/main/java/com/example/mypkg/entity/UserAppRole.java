@@ -34,4 +34,11 @@ public class UserAppRole {
 	@ManyToOne
 	@JoinColumn(name = "role_name", nullable = false, insertable = false, updatable = false)
 	private Role role;
+
+	public UserAppRole(String roleName, Long userId) {
+		super();
+		this.roleName = roleName;
+		this.userId = userId;
+	}
+
 }

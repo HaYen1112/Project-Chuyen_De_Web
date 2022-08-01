@@ -11,48 +11,99 @@
                 </div>
                 <div class="w-100">
                   <p class="social-media d-flex justify-content-end">
-                    <a href="#" class="icon"><img src="/assets/images/icon-fb.png" alt=""></a>
-                    <a href="#" class="icon"><img src="/assets/images/icon-tw.png" alt=""></a>
+                    <a href="#" class="icon"
+                      ><img src="/assets/images/icon-fb.png" alt=""
+                    /></a>
+                    <a href="#" class="icon"
+                      ><img src="/assets/images/icon-tw.png" alt=""
+                    /></a>
                   </p>
                 </div>
               </div>
-              <form action="#" class="signin-form">
+              <form (ngSubmit)="onClickRegister($event)">
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" required>
-                  <label class="form-control-placeholder" for="username">Họ và tên</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    max="50"
+                    id="fullName"
+                    name="fullName"
+                    [(ngModel)]="user.fullName"
+                  />
+                  <label class="form-control-placeholder" for="username"
+                    >Họ và tên</label
+                  >
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" required>
-                  <label class="form-control-placeholder" for="username">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    name="email"
+                    [(ngModel)]="user.email"
+                  />
+                  <label class="form-control-placeholder" for="username"
+                    >Email</label
+                  >
                 </div>
                 <div class="form-group">
-                  <input id="password-field" type="password" class="form-control" required>
-                  <label class="form-control-placeholder" for="password">Mật khẩu</label>
-                  <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  <input
+                    id="password"
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    maxlength="30"
+                    [(ngModel)]="user.password"
+                  />
+                  <label class="form-control-placeholder" for="password"
+                    >Mật khẩu</label
+                  >
+                  <span
+                    toggle="#password-field"
+                    class="fa fa-fw fa-eye field-icon toggle-password"
+                  ></span>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" required>
-                  <label class="form-control-placeholder" for="username">Địa chỉ</label>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" required>
-                  <label class="form-control-placeholder" for="username">Số điện thoại</label>
+                  <input
+                    type="number"
+                    id="phoneNumber"
+                    class="form-control"
+                    [(ngModel)]="user.phoneNumber"
+                    name="phoneNumber"
+                    maxlength="15"
+                  />
+                  <label class="form-control-placeholder" for="username"
+                    >Số điện thoại</label
+                  >
                 </div>
                 <div class="form-group">
-                  <button type="submit" class="form-control btn btn-primary rounded submit px-3">Đăng ký</button>
-                </div>
-                <div class="form-group d-md-flex">
-                  <div class="w-50 text-left">
-                    <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-                    <input type="checkbox" checked>
-                    <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  
+                  <button
+                    type="submit"
+                    class="form-control btn btn-primary rounded submit px-3"
+                  >
+                    Đăng ký
+                  </button>
                 </div>
               </form>
-              <p class="text-center" >Do you have an account? 
-                <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/dangnhap']"  class="parent">Login</a></p>
+              <div class="form-group d-md-flex">
+                <div class="w-50 text-left">
+                  <label class="checkbox-wrap checkbox-primary mb-0"
+                    >Remember Me
+                    <input type="checkbox" checked />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <p class="text-center">
+                Do you have an account?
+                <a
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  [routerLink]="['/dangnhap']"
+                  class="parent"
+                  >Login</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -60,5 +111,3 @@
     </div>
   </section>
 </body>
-
-
