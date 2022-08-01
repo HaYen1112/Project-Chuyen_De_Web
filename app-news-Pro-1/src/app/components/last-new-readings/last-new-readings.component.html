@@ -7,26 +7,81 @@
   </div>
   <div class="body">
     <div class="most-recent-area">
-      <div class="content" [ngStyle]="{display: display}">
-        <input type="text" [(ngModel)]="keyword" class="input-tk" name="keyword" placeholder="Tìm kiếm...">
-        <button class="icon" (click)="view()"><i class="fa fa-search"></i></button>
-    </div>
-      <!-- Section Tittle -->
-      <div class="small-tittle mb-20">
-          <h4 style="font-weight: bold;margin: 30px 0px 20px 40px;">{{title}}</h4>
-      </div>
-      
-      <!-- Single -->
-      <div class="most-recent-single" *ngFor="let d of dataItem; let i=index">
-          <div class="most-recent-images">
-              <img src="{{d.image}}" alt="">
-          </div>
 
-          <div class="most-recent-capt">
-              <h4><a href="{{d.link}}" target="blank">{{d.title}}</a></h4>
-              <p>{{d.time}}</p>
+           <!-- Single -->
+      <div class="most-recent-single" >
+        <div class="row1">
+          <div class="col-md-4 sp_list">
+            <div class="khunghinhsp">
+              <a href="details.html">
+                <img src = "./assets/images/sp1.png"
+              /></a>
+            </div>
+            <div class="row">
+              <div class="des col-6">
+                <a href="details.html">Đồng hồ nam</a>
+                <div class="giasp">2000000</div>
+              </div>
+              <div class="des col-6">
+                <button
+                  class="btn btn-success"
+                  type="button"
+
+                >
+                  Add
+                </button>
+              </div>
+            </div>
           </div>
-      </div>
+        </div>
+        <div class="row1">
+          <div class="col-md-4 sp_list">
+            <div class="khunghinhsp">
+              <a href="details.html">
+                <img src = "./assets/images/sp1.png"
+              /></a>
+            </div>
+            <div class="row">
+              <div class="des col-6">
+                <a href="details.html">Đồng hồ nam</a>
+                <div class="giasp">2000000</div>
+              </div>
+              <div class="des col-6">
+                <button
+                  class="btn btn-success"
+                  type="button"
+
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row1">
+          <div class="col-md-4 sp_list">
+            <div class="khunghinhsp">
+              <a href="details.html">
+                <img src = "./assets/images/sp1.png"
+              /></a>
+            </div>
+            <div class="row">
+              <div class="des col-6">
+                <a href="details.html">Đồng hồ nam</a>
+                <div class="giasp">2000000</div>
+              </div>
+              <div class="des col-6">
+                <button
+                  class="btn btn-success"
+                  type="button"
+
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
   </div>
