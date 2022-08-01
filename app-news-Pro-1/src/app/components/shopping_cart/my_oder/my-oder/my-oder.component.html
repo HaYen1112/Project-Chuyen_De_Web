@@ -3,9 +3,11 @@
 <html lang="en">
   <body class="">
     <div style="margin-top: 0px" class="container">
-      <div class="container1">
-        <h5>Danh sách đơn hàng</h5>
-        <table class="table table-bordered">
+      <div style="height: 120px; width: 100%"></div>
+      <h2 *ngIf="bills.length == 0" style="text-align: center;">Bạn chưa có đơn hàng!</h2>
+      <div class="container1" *ngFor="let bill of bills; let i = index">
+        <h5>Đơn hàng {{ i + 1 }}</h5>
+        <table class="table table-bordered mt-3">
           <thead>
             <tr>
               <th scope="col">STT</th>
@@ -16,34 +18,35 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td><img class="img-pro" /></td>
-              <td>Otto</td>
-              <td>1</td>
-              <td>4000000 VNĐ</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td><img class="img-pro" /></td>
-              <td>Otto</td>
-              <td>1</td>
-              <td>4000000 VNĐ</td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td><img class="img-pro" /></td>
-              <td>Otto</td>
-              <td>1</td>
-              <td>4000000 VNĐ</td>
+            <tr *ngFor="let item of bill.productBillsDTO; let j = index">
+              <th scope="row">{{ j + 1 }}</th>
+              <td><img class="img-pro" [src]="item.image" /></td>
+              <td>{{ item.productName }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.price * item.quantity }} VNĐ</td>
             </tr>
             <tr>
               <td colspan="1"></td>
-              <td style="font-weight: bold; font-size: 18px">Trạng thái</td>
-              <td style="font-weight: bold;color: #68838B; font-size: 18px">Đang vận chuyển</td>
-              <td style="font-weight: bold; font-size: 18px">Tổng tiền</td>
-              <td style="font-weight: bold; color: #b93a3a; font-size: 18px">
-                4000000 VNĐ
+              <td style="font-weight: bold; font-size: 16px">Trạng thái</td>
+              <td style="font-weight: bold; color: #68838b; font-size: 16px">
+                {{ bill.billStatus }}
+              </td>
+              <td style="font-weight: bold; font-size: 16px">Phí vận chuyển</td>
+              <td style="font-weight: bold; color: #68838b; font-size: 16px">
+                {{ bill.deliveryCost }}
+                VNĐ
+              </td>
+            </tr>
+            <tr>
+              <td colspan="1"></td>
+              <td style="font-weight: bold; font-size: 16px">Ngày đặt</td>
+              <td style="font-weight: bold; color: #68838b; font-size: 16px">
+                {{ bill.date }}
+              </td>
+              <td style="font-weight: bold; font-size: 20px">TỔNG TIỀN</td>
+              <td style="font-weight: bold; color: #b93a3a; font-size: 20px">
+                {{ totalPriceBill(bill.productBillsDTO, bill.deliveryCost) }}
+                VNĐ
               </td>
             </tr>
           </tbody>

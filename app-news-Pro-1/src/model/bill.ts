@@ -4,5 +4,6 @@ export class Bill {
     billStatus!: string;
     address!: string;
     deliveryCost!: number;
+    date!: number;
     productBillsDTO!: ProductBill[];
 }
