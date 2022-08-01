@@ -24,8 +24,12 @@ public class UserApp {
 	private Long id;
 	@Column(name = "email", nullable = false)
 	private String email;
+	private Long phoneNumber;
 	@Column(name = "password", nullable = false)
 	private String password;
+
+	private String fullName;
+  
 	public Long getId() {
 		return id;
 	}
@@ -44,5 +48,5 @@ public class UserApp {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 }

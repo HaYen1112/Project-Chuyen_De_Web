@@ -89,7 +89,7 @@
         <i class="far fa-user"></i>
         <span>ĐĂNG NHẬP</span>
       </a>
-      <a *ngIf="loginService.isLogged()" style="cursor: pointer;" class="parent">
+      <a (click)="onClickLogout()" *ngIf="loginService.isLogged()" style="cursor: pointer;" class="parent">
         <i class="far fa-user"></i>
         <span>ĐĂNG XUẤT</span>
       </a>
