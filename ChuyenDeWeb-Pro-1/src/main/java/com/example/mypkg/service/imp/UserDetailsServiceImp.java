@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.mypkg.entity.UserApp;
 import com.example.mypkg.repository.UserAppRepository;
-import com.example.mypkg.repository.;
+import com.example.mypkg.repository.UserAppRoleRepository;
 
 @Service
 public class UserDetailsServiceImp implements UserDetailsService {
