@@ -20,7 +20,6 @@ import lombok.Setter;
 
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @Table(name = "bill")
@@ -45,6 +44,66 @@ public class Bill {
 		this.isDelete = isDelete;
 		this.dateCreate = dateCreate;
 		this.deliveryCostId = deliveryCostId;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public BillStatus getBillStatus() {
+		return billStatus;
+	}
+
+	public void setBillStatus(BillStatus billStatus) {
+		this.billStatus = billStatus;
+	}
+
+	public boolean isDelete() {
+		return isDelete;
+	}
+
+	public void setDelete(boolean isDelete) {
+		this.isDelete = isDelete;
+	}
+
+	public Date getDateCreate() {
+		return dateCreate;
+	}
+
+	public void setDateCreate(Date dateCreate) {
+		this.dateCreate = dateCreate;
+	}
+
+	public Long getDeliveryCostId() {
+		return deliveryCostId;
+	}
+
+	public void setDeliveryCostId(Long deliveryCostId) {
+		this.deliveryCostId = deliveryCostId;
+	}
+
+	public DeliveryCost getDeliveryCost() {
+		return deliveryCost;
+	}
+
+	public void setDeliveryCost(DeliveryCost deliveryCost) {
+		this.deliveryCost = deliveryCost;
+	}
+
+	public Bill() {
+		super();
 	}
 
 }
