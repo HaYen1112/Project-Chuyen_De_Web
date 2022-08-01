@@ -133,6 +133,7 @@ export class Cart1Component implements OnInit, OnDestroy {
     }
   }
 
+  
   totalPrice(): number {
     let result = 0;
     this.products.forEach((element) => {

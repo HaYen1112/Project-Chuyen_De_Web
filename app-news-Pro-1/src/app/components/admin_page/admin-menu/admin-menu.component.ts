@@ -1,5 +1,6 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { LoginService } from 'src/service/login.service';
 
 @Component({
   selector: 'app-admin-menu',
@@ -9,7 +10,7 @@ import { Router, RouterLink } from '@angular/router';
 @Injectable({providedIn: 'root'})
 export class AdminMenuComponent implements OnInit {
   @Input() act: string ='';
-  constructor(private router:Router){
+  constructor(private router:Router,public loginService: LoginService){
       if(this.router.url=='/admin/product/add'||this.router.url=='/admin/product/edit'){
         this.act='active';
       }
@@ -17,5 +18,9 @@ export class AdminMenuComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+  onClickLogout() {
+    localStorage.setItem('roles', '');
+    localStorage.setItem('token', '');
+    this.router.navigate(['/dangnhap']);
+  }
 }

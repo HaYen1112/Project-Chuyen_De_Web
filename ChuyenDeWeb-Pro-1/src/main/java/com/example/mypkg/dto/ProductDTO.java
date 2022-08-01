@@ -1,5 +1,7 @@
 package com.example.mypkg.dto;
 
+import com.example.mypkg.until.ProductType;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,4 +17,5 @@ public class ProductDTO {
 	private String productName;
 	private Float price;
 	private String img;
+	private ProductType productType;
 }

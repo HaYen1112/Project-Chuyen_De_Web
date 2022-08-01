@@ -40,6 +40,7 @@ export class FormLoginComponent implements OnDestroy {
           if (lastParam === 'gio-hang') {
             this.router.navigate(['/shoppingcart']);
           } else {
+
             roles.forEach((element) => {
               if (element == 'ROLE_ADMIN') {
                 this.router.navigate(['/admin']);
