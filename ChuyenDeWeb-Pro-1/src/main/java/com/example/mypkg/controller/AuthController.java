@@ -1,5 +1,7 @@
 package com.example.mypkg.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.mypkg.dto.AuthDTO;
 import com.example.mypkg.dto.ResponseObject;
 import com.example.mypkg.dto.UserAppDTO;
+import com.example.mypkg.service.UserAppRoleService;
 import com.example.mypkg.until.JwtUtil;
 import com.example.mypkg.until.Message;
 
@@ -22,6 +26,8 @@ public class AuthController {
 	private JwtUtil jwtUtil;
 	@Autowired
 	private AuthenticationManager authenticationManager;
+	@Autowired
+	private UserAppRoleService userAppRoleService;
 
 	@PostMapping("/authenticate")
 	public ResponseEntity<?> generatoken(@RequestBody UserAppDTO userAppDTO) throws Exception {
@@ -32,7 +38,8 @@ public class AuthController {
 			return ResponseEntity.ok().body(new ResponseObject(String.valueOf(HttpStatus.EXPECTATION_FAILED),
 					Message.MS_LOGIN_FAILED.get(), null));
 		}
-		return ResponseEntity.ok().body(
-				new ResponseObject(String.valueOf(HttpStatus.OK), "", jwtUtil.generateToken(userAppDTO.getEmail())));
+		List<String> myRoles = userAppRoleService.getRoleNames(userAppDTO.getEmail());
+		AuthDTO authDTO = new AuthDTO(jwtUtil.generateToken(userAppDTO.getEmail()), myRoles);
+		return ResponseEntity.ok().body(new ResponseObject(String.valueOf(HttpStatus.OK), "", authDTO));
 	}
 }
